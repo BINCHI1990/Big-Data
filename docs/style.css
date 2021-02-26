@@ -1,14 +1,71 @@
 p.caption {
   color: #777;
   margin-top: 10px;
+
 }
 p code {
   white-space: inherit;
+  
 }
 pre {
   word-break: normal;
   word-wrap: normal;
+  
 }
 pre code {
   white-space: inherit;
+  
 }
+
+h1.title {
+  display: block;
+  font-size: 4em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: "lato";
+
+  font-weight: bold;
+  color:#800080;
+  text-align: center;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: "lato";
+  font-weight: bold;
+  
+}
+
+h2 {
+  color:#363636; 
+  font-family: "lato";
+  font-size: 32px;
+}
+h3 {
+ 
+  font-family: "lato";
+  
+}
+h4{
+  font-weight:500;
+  font-family: "lato";
+
+}
+h5{
+  font-family: "lato";
+ 
+}
+
+body {
+  font-family: "lato";
+  font-size: 22px;
+}
+
+

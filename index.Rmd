@@ -1,9 +1,16 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
-date: "`r Sys.Date()`"
+title: "Working with large datasets in R"
+
+author: "Bin Chi"
+date: "1/3/2021"
 site: bookdown::bookdown_site
+css: style.css
+
 ---
 
-# Down the rabbit-hole
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
+
+# {-}

@@ -1,0 +1,25 @@
+# Getting started
+  
+## Installing packages
+
+If you have installed related packages already, you can jump to the next step.
+```{r}
+#install.packages("data.table")
+#install.packages("dtplyr")
+```
+
+
+## Loading packages
+Load the packages for today's seminar.  
+```{r}
+#load the packages for this seminar
+library(data.table)
+library(dtplyr)
+```
+
+**Note:** Once you have loaded the package successfully, there will be a check mark display before the package under your packages tab at the bottom right pane.
+
+
+## Dataset
+
+

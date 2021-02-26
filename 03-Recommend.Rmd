@@ -1,0 +1,38 @@
+# Recommended resources
+<br>
+
+## Resouces for the handle big data in R
+ -   [Handling large data sets in R](https://rpubs.com/msundar/large_data_analysis)
+<br>
+ -   [Five ways to handle Big Data in R](https://www.r-bloggers.com/2013/11/five-ways-to-handle-big-data-in-r/)
+<br>
+
+
+
+## Resouces for the data.table package
+ -   [Blazing Fast Data Wrangling With R data.table](https://towardsdatascience.com/blazing-fast-data-wrangling-with-r-data-table-de5045cc4b4d)
+<br>
+
+ -   [data.table in R – The Complete Beginners Guide](https://www.machinelearningplus.com/data-manipulation/datatable-in-r-complete-guide/)
+<br>
+
+
+## Resouces for dtplyr package
+
+ - [Big Data: Wrangling 4.6M Rows with dtplyr](https://www.business-science.io/code-tools/2019/08/15/big-data-dtplyr.html)
+<br>
+ -  [GOOGLE](https://www.google.com/)
+<br>
+
+
+
+
+## Resouces for PostGIS softwware
+
+
+## Resouces for Alteryx softwware
+
+
+
+  
+

@@ -1,0 +1,13 @@
+introduction
+recommended-resources
+resouces-for-the-handle-big-data-in-r
+resouces-for-the-data.table-package
+resouces-for-dtplyr-package
+resouces-for-postgis-softwware
+resouces-for-alteryx-softwware
+getting-started
+installing-packages
+loading-packages
+dataset
+working-with-big-data-in-r
+challenges
