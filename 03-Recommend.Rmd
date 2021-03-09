@@ -34,5 +34,14 @@
 
 
 
-  
+## Data
+
+ - [Scottish Energy Performance Certificate Register](https://www.scottishepcregister.org.uk/)
+<br>
+ -  [Scottish Domestic Energy Performance Certificates](https://statistics.gov.scot/data/domestic-energy-performance-certificates)
+<br>
+ -  [Scottish Non-domestic Energy Performance Certificates](https://statistics.gov.scot/data/non-domestic-energy-performance-certificates)
+<br>
+ -  [Energy Performance of Buildings Data: England and Wales](https://epc.opendatacommunities.org/)
+<br> 
 
