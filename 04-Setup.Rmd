@@ -15,8 +15,9 @@ Load the packages for today's talk
 #load the packages for this seminar
 library(data.table)
 library(dtplyr)
-
-
+library("sqldf")
+library("RPostgreSQL")
+library("dplyr")
 
 ```
 

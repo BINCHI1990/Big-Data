@@ -15,7 +15,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 <br><br>
 - Basic big data munging/wrangling
 <br><br>
-- Work with PostGIS database in  R
+- Work with PostGIS database in R
 <br><br>
 - Measure code performance 
 <br><br>

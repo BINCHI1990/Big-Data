@@ -37,6 +37,11 @@
 <br><br> 
  
 
+ -   [R Performance Tuning | Learn Tips to Improve Speed & Memory of R Programs](https://data-flair.training/blogs/r-performance-tuning-techniques/)
+<br><br> 
+
+
+
  -   [Getting Started With Parallel Programming In R](https://towardsdatascience.com/getting-started-with-parallel-programming-in-r-d5f801d43745)
 <br><br>
 
@@ -57,7 +62,8 @@
 
 
 ## Resouces for the data.table package
-
+ -   [Data Transformation with data.table : : CHEAT SHEET](file:///C:/Users/casa-alienware%20Bin%20C/Documents/Downloads/datatable%20(6).pdf)
+<br>
  -   [A data.table and dplyr tour](https://atrebas.github.io/post/2019-03-03-datatable-dplyr/)
 <br>
  -   [Blazing Fast Data Wrangling With R data.table](https://towardsdatascience.com/blazing-fast-data-wrangling-with-r-data-table-de5045cc4b4d)
@@ -80,6 +86,15 @@
 
 ## Measuring R performance
  -   [Measuring performance](https://adv-r.hadley.nz/perf-measure.html#perf-measure)
+<br>
+
+ -   [Strategies to Speedup R Code](https://www.r-bloggers.com/2016/01/strategies-to-speedup-r-code/)
+<br>
+
+ -   [R Code Optimizer](https://rpubs.com/IACCancu/462493)
+<br>
+
+ -   [Strategies to Speedup R Code](https://www.r-bloggers.com/2016/01/strategies-to-speedup-r-code/)
 <br>
 
 
