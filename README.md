@@ -1,1 +1,2 @@
-This is the document for UCL R user group meeting talk(25/3/2021). The final documents will launch in 24/3/2021.
+This bookdown contains documents for UCL R user group meeting talk (25/3/2021). It aims to introduces some methods on how to work with large datasets in R. The dataset used in this talk is not allowed to be used commercially. They must be shared on the same terms as the data was originally obtained.
+
