@@ -2,7 +2,7 @@
   
 ## Installing packages
 
-If you have installed related packages already, you can jump to the next step.
+If you have installed the below packages already, you can jump to the next step.
 ```{r}
 #install.packages("data.table")
 #install.packages("dtplyr")
@@ -12,7 +12,7 @@ If you have installed related packages already, you can jump to the next step.
 ## Loading packages
 Load the packages for today's talk  
 ```{r}
-#load the packages for this seminar
+
 library(data.table)
 library(dtplyr)
 library("sqldf")
@@ -21,13 +21,13 @@ library("dplyr")
 
 ```
 
-## Install PostGIS and Alteryx
+## Install PostGIS and Alteryx software
 ### Install PostGIS
 
 
 
 ### Install Alteryx
-For academics, students, nonprofits , you can install the Alteryx for free through [Alteryx for Good](https://www.alteryx.com/why-alteryx/alteryx-for-good).
+For academics, students, nonprofits institutes, you can install the Alteryx for free through [Alteryx for Good](https://www.alteryx.com/why-alteryx/alteryx-for-good).
 
 ```{r}
 #install.packages("data.table")

@@ -1,7 +1,7 @@
 # Recommended resources
 <br>
 
-## Resouces for the handle big data in R
+## Resouces for handling big data in R
  -   [Handling large data sets in R](https://rpubs.com/msundar/large_data_analysis)
 <br><br>
 
@@ -61,7 +61,7 @@
 
 
 
-## Resouces for the data.table package
+## Resources for the data.table package
  -   [Data Transformation with data.table : : CHEAT SHEET](file:///C:/Users/casa-alienware%20Bin%20C/Documents/Downloads/datatable%20(6).pdf)
 <br>
  -   [A data.table and dplyr tour](https://atrebas.github.io/post/2019-03-03-datatable-dplyr/)
@@ -84,7 +84,7 @@
 <br>
 
 
-## Measuring R performance
+## Resources for measuring R performance
  -   [Measuring performance](https://adv-r.hadley.nz/perf-measure.html#perf-measure)
 <br>
 
@@ -98,7 +98,7 @@
 <br>
 
 
-## Resouces for PostGIS softwware
+## Resources for PostGIS software
 
  -   [About PostGIS](https://postgis.net/)
 <br>
@@ -111,7 +111,7 @@
 
 >PostGIS is an optional extension that must be enabled in each database you want to use it in before you can use it.
 
-## Resouces for Alteryx softwware
+## Resources for Alteryx softwware
 
 -   [What is Alteryx?](https://www.youtube.com/watch?v=F8MSnofnItM)
 <br>
@@ -139,7 +139,7 @@
 
 
 
-## Data
+## Datasets
 
 
  -  [Energy Performance of Buildings Data: England and Wales](https://epc.opendatacommunities.org/)
@@ -149,7 +149,7 @@
 <br> 
 
  -  [A new attribute-linked residential property price dataset for England and Wales 2011-2019](https://reshare.ukdataservice.ac.uk/854240/)
- 
+ <br> 
   - [Scottish Energy Performance Certificate Register](https://www.scottishepcregister.org.uk/)
 <br>
  - [Scottish Domestic Energy Performance Certificates](https://statistics.gov.scot/data/domestic-energy-performance-certificates)

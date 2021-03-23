@@ -1,6 +1,6 @@
 # Working with big data in R
 
-## Read CSV files
+## Read in CSV files
 
 ### Read one large CSV file 
 
@@ -9,7 +9,7 @@
 ```{r}
 library(data.table)
 Sys.time()
-##It will take 3 mins to read in 5,732,838 records with 105 variables
+##It will take around 3 mins to read in 5,732,838 records with 105 variables
 tran2<-fread("tranall2011_19.csv")
 Sys.time()
 ```
@@ -24,7 +24,7 @@ Sys.time()
 
 ```
 
-(3) Read CSV file with the second row as header
+(3) Read CSV file with the second row as header and dropping the first row
 <center>
 
 ![](sepc.png)
@@ -39,19 +39,22 @@ epcdata14<-read.csv("D_EPC_data_2020_Q4_extract_0221.csv", skip = 1)
 
 ### Fast reading multiple EPC csv files together in R
 
-(1) Code for read in EPCs in England and Wales
+(1) Code for reading in EPCs in England and Wales
 ```{r}
+## assume all the unzipped EPC stored in EPC folder in D drive
+
 
 #x1 <- list.files(path = ".", pattern = NULL, all.files = FALSE,
                  #full.names = FALSE, recursive = FALSE)
-## assume all the unzip EPC is store in EPC floder in D drive
+
+
 #datalist <- paste("D:/EPC",x1,"certificates.csv",sep="/")
 
 #epcdata = data.table::rbindlist(lapply(datalist, data.table::fread, showProgress = FALSE))
 
 ```
 
-(2) Code for read in EPCs in Scotland
+(2) Code for reading in EPCs in Scotland
 
 ```{r}
 #datalist = list.files(pattern="*.csv")
@@ -61,13 +64,15 @@ epcdata14<-read.csv("D_EPC_data_2020_Q4_extract_0221.csv", skip = 1)
 ```
 
 
-## Basic big data munging/wrangling
+## Basic larger dataset munging/wrangling
 ### Select columns
 
 ```{r}
 
 class(tran2)
+
 needlist<-c("id","transactionid","postcode","price","dateoftransfer","propertytype","msoa11","laua","tfarea","numberrooms","priceper","CURRENT_ENERGY_EFFICIENCY","POTENTIAL_ENERGY_RATING","WALLS_ENERGY_EFF")
+
 tran2<-tran2[,..needlist]
 head(tran2)
 ```
@@ -95,7 +100,7 @@ head(tran2)
 
 ```{r}
 
-#setnames(tran2, toupper(names(tran2)))
+#setnames(tran2, toupper(names(tran2))) laua==
 
 ```
 
@@ -106,7 +111,7 @@ head(tran2)
 
 ```
 
-### Covert datatable values to uppercase
+### Convert datatable values to uppercase
 ```{r}
 
 #epcdata[,  `:=`(add1 = toupper(address1),
@@ -143,12 +148,13 @@ head(tran2)
 
 #fwrite(tran2,"tran2.csv")
 
+
 ```
 
 
 
 ## Work with PostGIS database in R
-### Write files in PostGIS
+### Write files to PostGIS
 ```{r}
 
 #drv <- dbDriver("PostgreSQL")

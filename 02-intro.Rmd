@@ -1,6 +1,6 @@
 # Introduction
 
-This is documents for UCL R user group meeting talk (25/3/2021). It aims to introduces some methods on how to work with large datasets in R. The dataset used in this talk is not allowed to be used commercially. They must be shared on the same terms as the data was originally obtained.
+This bookdown contains documents for UCL R user group meeting talk (25/3/2021). It aims to introduces some methods on how to work with large datasets in R. The dataset used in this talk is not allowed to be used commercially. They must be shared on the same terms as the data was originally obtained.
 
 <br><br> 
 By the end of the talk you will have: <br>
@@ -13,11 +13,11 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 
 - Read large CSV files together
 <br><br>
-- Basic big data munging/wrangling
+- Tried  basic big data munging/wrangling
 <br><br>
-- Work with PostGIS database in R
+- Worked with PostGIS database in R
 <br><br>
-- Measure code performance 
+- Measured code performance 
 <br><br>
-- Execute R code in Alteryx 
+- Executed R code in Alteryx 
 </div>
