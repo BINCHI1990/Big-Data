@@ -10,16 +10,33 @@ If you have installed related packages already, you can jump to the next step.
 
 
 ## Loading packages
-Load the packages for today's seminar.  
+Load the packages for today's talk  
 ```{r}
 #load the packages for this seminar
 library(data.table)
 library(dtplyr)
+
+
+
 ```
+
+## Install PostGIS and Alteryx
+###Install PostGIS
+
+
+
+###Install Alteryx
+For academics, students, nonprofits , you can install the Alteryx for free through [Alteryx for Good](https://www.alteryx.com/why-alteryx/alteryx-for-good).
+
+```{r}
+#install.packages("data.table")
+#install.packages("dtplyr")
+```
+
 
 **Note:** Once you have loaded the package successfully, there will be a check mark display before the package under your packages tab at the bottom right pane.
 
 
-## Dataset
+
 
 

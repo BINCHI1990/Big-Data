@@ -179,10 +179,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">2.1</span> Resouces for the handle big data in R</h2>
 <ul>
 <li><a href="https://rpubs.com/msundar/large_data_analysis">Handling large data sets in R</a>
-<br></li>
-<li><a href="https://www.r-bloggers.com/2013/11/five-ways-to-handle-big-data-in-r/">Five ways to handle Big Data in R</a>
-<br></li>
+<br><br></li>
 </ul>
+<blockquote>
+<p>Notes:</p>
+<p>Medium sized datasets (&lt; 2 GB):loaded in R ( within memory limit but processing is cumbersome (typically in the 1-2 GB range )</p>
+<p>Large files that cannot be loaded in R due to R / OS limitations</p>
+<ul>
+<li><p>Large files(2 - 10 GB):process locally using some work around solutions</p></li>
+<li><p>Very Large files( &gt; 10 GB):needs distributed large scale computing.</p></li>
+</ul>
+</blockquote>
+<ul>
+<li><a href="https://www.r-bloggers.com/2013/11/five-ways-to-handle-big-data-in-r/">Five ways to handle Big Data in R</a>
+<br><br></li>
+</ul>
+<blockquote>
+<p>Notes:
+As a rule of thumb: Data sets that contain up to one million records can easily processed with standard R.
+Data sets with about one million to one billion records can also be processed in R, but need some additional effort.
+Data sets that contain more than one billion records need to be analyzed by map reduce algorithms.</p>
+</blockquote>
 </div>
 <div id="resouces-for-the-data.table-package" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Resouces for the data.table package</h2>
