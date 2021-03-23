@@ -1,15 +1,23 @@
 # Introduction
 
-<br><br>
+This is documents for UCL R user group meeting talk(25/3/2021). It aims to introduces some methods on how to work with large datasets in R. The dataset used in this talk is not allowed to be used commercially. They must be shared on the same terms as the data was originally obtained.
 
-# About 
+<br><br> 
+By the end of the talk you will have: <br>
 
-Bin
+<br>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
-PhD The Bartlett Centre for Advanced Spatial Analysis. 
-
-House prices and housing affordability in England from a geographical perspective
-
-Part-time Data Scientist at UCL geography.
-
-# 
+- Read large CSV files together
+<br>
+- Basic big data munging/wrangling
+<br>
+- Work with PostGIS database in  R
+<br>
+- Measure code performance 
+<br>
+- Execute R code in Alteryx 
+</div>

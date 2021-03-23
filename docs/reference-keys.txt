@@ -1,6 +1,4 @@
 introduction
-about
-section-1
 recommended-resources
 resouces-for-the-handle-big-data-in-r
 resouces-for-the-data.table-package

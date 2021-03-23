@@ -1,16 +1,14 @@
---- 
+---
 title: "Working with large datasets in R"
 
 author: "Bin Chi"
-date: "18/3/2021"
+date: "25/3/2021"
 site: bookdown::bookdown_site
 css: style.css
-
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-# {-}
+#  {.unnumbered}
