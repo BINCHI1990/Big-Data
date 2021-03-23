@@ -22,13 +22,13 @@
 
 > Notes:
 >
->rule of thumb
+> rule of thumb
 >
->Data sets that contain up to one million records can easily processed with standard R.
+> Data sets that contain up to one million records can easily processed with standard R.
 >
->Data sets with about one million to one billion records can also be processed in R, but need some additional effort.
+> Data sets with about one million to one billion records can also be processed in R, but need some additional effort.
 >
->Data sets that contain more than one billion records need to be analyzed by map reduce algorithms. 
+> Data sets that contain more than one billion records need to be analyzed by map reduce algorithms. 
  
  -   [Efficient data carpentry](https://csgillespie.github.io/efficientR/data-carpentry.html)
 <br><br> 

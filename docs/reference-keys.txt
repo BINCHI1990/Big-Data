@@ -2,13 +2,13 @@ introduction
 recommended-resources
 resouces-for-the-handle-big-data-in-r
 resouces-for-the-data.table-package
-resouces-for-dtplyr-package
+measuring-r-performance
 resouces-for-postgis-softwware
 resouces-for-alteryx-softwware
 data
 getting-started
 installing-packages
 loading-packages
-dataset
+install-postgis-and-alteryx
 working-with-big-data-in-r
 challenges

@@ -139,7 +139,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.1" data-path="recommended-resources.html"><a href="recommended-resources.html#resouces-for-the-handle-big-data-in-r"><i class="fa fa-check"></i><b>2.1</b> Resouces for the handle big data in R</a></li>
 <li class="chapter" data-level="2.2" data-path="recommended-resources.html"><a href="recommended-resources.html#resouces-for-the-data.table-package"><i class="fa fa-check"></i><b>2.2</b> Resouces for the data.table package</a></li>
-<li class="chapter" data-level="2.3" data-path="recommended-resources.html"><a href="recommended-resources.html#resouces-for-dtplyr-package"><i class="fa fa-check"></i><b>2.3</b> Resouces for dtplyr package</a></li>
+<li class="chapter" data-level="2.3" data-path="recommended-resources.html"><a href="recommended-resources.html#measuring-r-performance"><i class="fa fa-check"></i><b>2.3</b> Measuring R performance</a></li>
 <li class="chapter" data-level="2.4" data-path="recommended-resources.html"><a href="recommended-resources.html#resouces-for-postgis-softwware"><i class="fa fa-check"></i><b>2.4</b> Resouces for PostGIS softwware</a></li>
 <li class="chapter" data-level="2.5" data-path="recommended-resources.html"><a href="recommended-resources.html#resouces-for-alteryx-softwware"><i class="fa fa-check"></i><b>2.5</b> Resouces for Alteryx softwware</a></li>
 <li class="chapter" data-level="2.6" data-path="recommended-resources.html"><a href="recommended-resources.html#data"><i class="fa fa-check"></i><b>2.6</b> Data</a></li>
@@ -148,7 +148,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="3.1" data-path="getting-started.html"><a href="getting-started.html#installing-packages"><i class="fa fa-check"></i><b>3.1</b> Installing packages</a></li>
 <li class="chapter" data-level="3.2" data-path="getting-started.html"><a href="getting-started.html#loading-packages"><i class="fa fa-check"></i><b>3.2</b> Loading packages</a></li>
-<li class="chapter" data-level="3.3" data-path="getting-started.html"><a href="getting-started.html#dataset"><i class="fa fa-check"></i><b>3.3</b> Dataset</a></li>
+<li class="chapter" data-level="3.3" data-path="getting-started.html"><a href="getting-started.html#install-postgis-and-alteryx"><i class="fa fa-check"></i><b>3.3</b> Install PostGIS and Alteryx</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="working-with-big-data-in-r.html"><a href="working-with-big-data-in-r.html"><i class="fa fa-check"></i><b>4</b> Working with big data in R</a></li>
 <li class="chapter" data-level="5" data-path="challenges.html"><a href="challenges.html"><i class="fa fa-check"></i><b>5</b> Challenges</a></li>
@@ -195,47 +195,105 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <br><br></li>
 </ul>
 <blockquote>
-<p>Notes:
-As a rule of thumb: Data sets that contain up to one million records can easily processed with standard R.
-Data sets with about one million to one billion records can also be processed in R, but need some additional effort.
-Data sets that contain more than one billion records need to be analyzed by map reduce algorithms.</p>
+<p>Notes:</p>
+<p>rule of thumb</p>
+<p>Data sets that contain up to one million records can easily processed with standard R.</p>
+<p>Data sets with about one million to one billion records can also be processed in R, but need some additional effort.</p>
+<p>Data sets that contain more than one billion records need to be analyzed by map reduce algorithms.</p>
 </blockquote>
+<ul>
+<li><p><a href="https://csgillespie.github.io/efficientR/data-carpentry.html">Efficient data carpentry</a>
+<br><br></p></li>
+<li><p><a href="https://www.dropbox.com/sh/4m63647jbg7a1yy/AACa5TqdjBwOwchOpOa9s_Pda">Big Data Analytics with R</a>
+<br><br></p></li>
+<li><p><a href="https://towardsdatascience.com/getting-started-with-parallel-programming-in-r-d5f801d43745">Getting Started With Parallel Programming In R</a>
+<br><br></p></li>
+<li><p><a href="https://www.r-bloggers.com/2013/01/efficiency-in-joining-two-data-frames/">Efficiency in Joining Two Data Frames</a>
+<br><br></p></li>
+<li><p><a href="http://zevross.com/blog/2014/04/30/mini-post-for-large-tables-in-r-dplyrs-function-inner_join-is-much-faster-than-merge/">For large tables in R dplyr’s function inner_join() is much faster than merge()</a>
+<br><br></p></li>
+<li><p><a href="https://wetlandscapes.com/blog/a-comparison-of-r-dialects/">BASE R, THE TIDYVERSE, AND DATA.TABLE: A COMPARISON OF R DIALECTS TO WRANGLE YOUR DATA</a>
+<br><br></p></li>
+<li><p><a href="https://rstudio-pubs-static.s3.amazonaws.com/406521_7fc7b6c1dc374e9b8860e15a699d8bb0.html">Speed comparison of rbind, bind_rows, and rbindlist</a>
+<br><br></p></li>
+</ul>
 </div>
 <div id="resouces-for-the-data.table-package" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Resouces for the data.table package</h2>
 <ul>
+<li><p><a href="https://atrebas.github.io/post/2019-03-03-datatable-dplyr/">A data.table and dplyr tour</a>
+<br></p></li>
 <li><p><a href="https://towardsdatascience.com/blazing-fast-data-wrangling-with-r-data-table-de5045cc4b4d">Blazing Fast Data Wrangling With R data.table</a>
 <br></p></li>
 <li><p><a href="https://www.machinelearningplus.com/data-manipulation/datatable-in-r-complete-guide/">data.table in R – The Complete Beginners Guide</a>
 <br></p></li>
+<li><p><a href="http://brooksandrew.github.io/simpleblog/articles/advanced-data-table/">Advanced tips and tricks with data.table</a>
+<br></p></li>
+<li><p><a href="https://medium.com/analytics-vidhya/advanced-data-wrangling-in-r-4-f98693b92851">Advanced-Data Wrangling In R — 4</a>
+<br>
+## Resouces for dtplyr package</p></li>
+<li><p><a href="https://www.business-science.io/code-tools/2019/08/15/big-data-dtplyr.html">Big Data: Wrangling 4.6M Rows with dtplyr</a>
+<br></p></li>
+<li><p><a href="https://www.google.com/">GOOGLE</a>
+<br></p></li>
 </ul>
 </div>
-<div id="resouces-for-dtplyr-package" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Resouces for dtplyr package</h2>
+<div id="measuring-r-performance" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Measuring R performance</h2>
 <ul>
-<li><a href="https://www.business-science.io/code-tools/2019/08/15/big-data-dtplyr.html">Big Data: Wrangling 4.6M Rows with dtplyr</a>
-<br></li>
-<li><a href="https://www.google.com/">GOOGLE</a>
+<li><a href="https://adv-r.hadley.nz/perf-measure.html#perf-measure">Measuring performance</a>
 <br></li>
 </ul>
 </div>
 <div id="resouces-for-postgis-softwware" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Resouces for PostGIS softwware</h2>
+<ul>
+<li><p><a href="https://postgis.net/">About PostGIS</a>
+<br></p></li>
+<li><p><a href="http://zevross.com/blog/2019/12/04/install-postgres-postgis-and-get-started-with-spatial-sql/">Install Postgres/PostGIS and get started with spatial SQL</a>
+<br></p></li>
+<li><p><a href="https://postgis.net/install/">Enabling PostGIS</a>
+<br></p></li>
+</ul>
+<blockquote>
+<p>PostGIS is an optional extension that must be enabled in each database you want to use it in before you can use it.</p>
+</blockquote>
 </div>
 <div id="resouces-for-alteryx-softwware" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Resouces for Alteryx softwware</h2>
+<ul>
+<li><p><a href="https://www.youtube.com/watch?v=F8MSnofnItM">What is Alteryx?</a>
+<br></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=FzefmS9Fu7Y">Data Cleansing in Alteryx for Beginners</a>
+<br></p></li>
+<li><p><a href="https://www.theinformationlab.co.uk/2018/11/12/integrating-r-in-alteryx/">Integrating R in Alteryx</a>
+<br></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=nVYLRM-mbtk">Alteryx - Bring Your Own R Code</a>
+<br></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=MjGxzsMJINQ">How do I Import &amp; Union Multiple Excel Files with Alteryx</a>
+<br></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=v8xS0wrU6JA">The Union tool in Alteryx</a>
+<br></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=ueLeDn85E98">The unique tool in Alteryx</a>
+<br></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=RDly0ycZ2IE">How to Connect Alteryx to PostgreSQL</a>
+<br></p></li>
+</ul>
 </div>
 <div id="data" class="section level2" number="2.6">
 <h2><span class="header-section-number">2.6</span> Data</h2>
 <ul>
-<li><a href="https://www.scottishepcregister.org.uk/">Scottish Energy Performance Certificate Register</a>
-<br></li>
-<li><a href="https://statistics.gov.scot/data/domestic-energy-performance-certificates">Scottish Domestic Energy Performance Certificates</a>
-<br></li>
-<li><a href="https://statistics.gov.scot/data/non-domestic-energy-performance-certificates">Scottish Non-domestic Energy Performance Certificates</a>
-<br></li>
-<li><a href="https://epc.opendatacommunities.org/">Energy Performance of Buildings Data: England and Wales</a>
-<br></li>
+<li><p><a href="https://epc.opendatacommunities.org/">Energy Performance of Buildings Data: England and Wales</a>
+<br></p></li>
+<li><p><a href="https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads">Land Registry Price Paid Data(PPD)</a>
+<br></p></li>
+<li><p><a href="https://reshare.ukdataservice.ac.uk/854240/">A new attribute-linked residential property price dataset for England and Wales 2011-2019</a></p></li>
+<li><p><a href="https://www.scottishepcregister.org.uk/">Scottish Energy Performance Certificate Register</a>
+<br></p></li>
+<li><p><a href="https://statistics.gov.scot/data/domestic-energy-performance-certificates">Scottish Domestic Energy Performance Certificates</a>
+<br></p></li>
+<li><p><a href="https://statistics.gov.scot/data/non-domestic-energy-performance-certificates">Scottish Non-domestic Energy Performance Certificates</a>
+<br></p></li>
 </ul>
 
 </div>
