@@ -10,5 +10,6 @@ getting-started
 installing-packages
 loading-packages
 install-postgis-and-alteryx
+install-postgis
+install-alteryx
 working-with-big-data-in-r
-challenges

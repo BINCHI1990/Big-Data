@@ -22,7 +22,7 @@
 
 > Notes:
 >
-> rule of thumb
+> Rule of thumb:
 >
 > Data sets that contain up to one million records can easily processed with standard R.
 >

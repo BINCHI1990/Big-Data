@@ -21,11 +21,11 @@ library(dtplyr)
 ```
 
 ## Install PostGIS and Alteryx
-###Install PostGIS
+### Install PostGIS
 
 
 
-###Install Alteryx
+### Install Alteryx
 For academics, students, nonprofits , you can install the Alteryx for free through [Alteryx for Good](https://www.alteryx.com/why-alteryx/alteryx-for-good).
 
 ```{r}
