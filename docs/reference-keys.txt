@@ -1,7 +1,8 @@
 introduction
 recommended-resources
-resouces-for-handling-big-data-in-r
+resources-for-handling-big-data-in-r
 resources-for-the-data.table-package
+resouces-for-dtplyr-package
 resources-for-measuring-r-performance
 resources-for-postgis-software
 resources-for-alteryx-softwware
@@ -21,12 +22,12 @@ select-columns
 changing-column-names-to-lower-case-or-upper-case
 changing-column-names-to-lower-case
 changing-column-names-to-upper-case
-filter-rows
-add-in-id-column
+filter-rows-based-on-conditions
+add-in-the-id-column
 convert-datatable-values-to-uppercase
+delete-columns
 join-datasets
-get-unique-records
-join-datasets-1
+remove-duplicates
 write-files
 work-with-postgis-database-in-r
 write-files-to-postgis

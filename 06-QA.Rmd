@@ -1,4 +1,4 @@
 # Q & A {-}
 
-
-![](final.png){out.wide="100%"}
+## Thanks for your listening!{-}
+![](pic/final.png){out.wide="100%"}

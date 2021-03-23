@@ -5,7 +5,8 @@
 If you have installed the below packages already, you can jump to the next step.
 ```{r}
 #install.packages("data.table")
-#install.packages("dtplyr")
+#install.packages("dplyr")
+#install.packages("RPostgreSQL")
 ```
 
 
@@ -14,30 +15,131 @@ Load the packages for today's talk
 ```{r}
 
 library(data.table)
-library(dtplyr)
-library("sqldf")
-library("RPostgreSQL")
-library("dplyr")
+#library(dtplyr)
+library(sqldf)
+library(RPostgreSQL)
+library(dplyr)
 
 ```
 
 ## Install PostGIS and Alteryx software
 ### Install PostGIS
+(1) Step 1: download the PostgreSQL
+<center>
+
+![](pic/post1.png)
+</center>
+
+
+(2) Step 2: select the right version for your system
+<center>
+
+![](pic/post2.png)
+</center>
+(3) Step 3: download the installer
+<center>
+
+![](pic/post3.png)
+</center>
+(4) Step 4: download the software
+<center>
+
+![](pic/post4.png)
+</center>
+(5) Step 5: install the PostgreSQL
+<center>
+
+![](pic/post5.png)
+</center>
+(6) Step 6: set the password
+<center>
+
+![](pic/post6.png)
+</center>
+(7) Step 7: select the port number
+<center>
+
+![](pic/post7.png)
+</center>
+(8) Step 8: click the Stack Builder
+<center>
+
+![](pic/post8.png)
+</center>
+(9) Step 9: choose the PostgreSQL for additional installation
+<center>
+
+![](pic/post9.png)
+</center>
+(10) Step 10: install the spatial extension
+<center>
+
+![](pic/post10.png)
+</center>
+(10) Step 10: create a postGIS database
+<center>
+
+![](pic/post11.png)
+</center>
+
+(12) Step 12: Enter the password
+<center>
+
+![](pic/post12.png)
+</center>
+
+(13) Step 13: set the database name
+<center>
+
+![](pic/post13.png)
+</center>
+(14) Step 14: Finish
+<center>
+
+![](pic/post14.png)
+</center>
+
+You will find a PostGIS database names as casa in your postgreSQL
+<center>
+
+![](pic/post15.png)
+</center>
+**Note:** you can firstly create a database in PostgreSQL and then extent it to PostGIS database([Enabling PostGIS](https://postgis.net/install/))
+<center>
+
+![](pic/postold.png)
+</center>
 
 
 
 ### Install Alteryx
 For academics, students, nonprofits institutes, you can install the Alteryx for free through [Alteryx for Good](https://www.alteryx.com/why-alteryx/alteryx-for-good).
 
-```{r}
-#install.packages("data.table")
-#install.packages("dtplyr")
-```
+(1) Step 1: Apply the Alteryx For Good License
+<center>
+
+![](pic/alter1.png)
+</center>
+
+(2) Step 2: Click the Alteryx Designer in Product Downloads
+
+<center>
+
+![](pic/alter2.png)
+</center>
+
+(3) Step 3: click the Alteryx Designer (2021.1)
+
+<center>
+
+![](pic/alter3.png)
+</center>
 
 
-**Note:** Once you have loaded the package successfully, there will be a check mark display before the package under your packages tab at the bottom right pane.
+(4) Step 4: download the Alteryx Designer and Alteryx Predictive Tools
 
+<center>
 
-
-
+![](pic/alter4.png)
+</center>
 

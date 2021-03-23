@@ -1,7 +1,9 @@
 # Recommended resources
-<br>
-
-## Resouces for handling big data in R
+<br> 
+  
+## Resources for handling big data in R
+<br><br>
+  
  -   [Handling large data sets in R](https://rpubs.com/msundar/large_data_analysis)
 <br><br>
 
@@ -62,6 +64,7 @@
 
 
 ## Resources for the data.table package
+<br><br>
  -   [Data Transformation with data.table : : CHEAT SHEET](file:///C:/Users/casa-alienware%20Bin%20C/Documents/Downloads/datatable%20(6).pdf)
 <br>
  -   [A data.table and dplyr tour](https://atrebas.github.io/post/2019-03-03-datatable-dplyr/)
@@ -73,11 +76,15 @@
 <br>
  -   [Advanced tips and tricks with data.table](http://brooksandrew.github.io/simpleblog/articles/advanced-data-table/)
 <br>
-
  -   [Advanced-Data Wrangling In R — 4](https://medium.com/analytics-vidhya/advanced-data-wrangling-in-r-4-f98693b92851)
 <br>
-## Resouces for dtplyr package
 
+ -   [R : DATA.TABLE TUTORIAL (WITH 50 EXAMPLES)](https://www.listendata.com/2016/10/r-data-table.html)
+<br>
+
+
+## Resouces for dtplyr package
+<br><br>
  - [Big Data: Wrangling 4.6M Rows with dtplyr](https://www.business-science.io/code-tools/2019/08/15/big-data-dtplyr.html)
 <br>
  -  [GOOGLE](https://www.google.com/)
@@ -85,6 +92,7 @@
 
 
 ## Resources for measuring R performance
+<br><br>
  -   [Measuring performance](https://adv-r.hadley.nz/perf-measure.html#perf-measure)
 <br>
 
@@ -99,7 +107,7 @@
 
 
 ## Resources for PostGIS software
-
+<br><br>
  -   [About PostGIS](https://postgis.net/)
 <br>
 
@@ -112,7 +120,7 @@
 >PostGIS is an optional extension that must be enabled in each database you want to use it in before you can use it.
 
 ## Resources for Alteryx softwware
-
+<br><br>
 -   [What is Alteryx?](https://www.youtube.com/watch?v=F8MSnofnItM)
 <br>
 
@@ -140,8 +148,7 @@
 
 
 ## Datasets
-
-
+<br><br>
  -  [Energy Performance of Buildings Data: England and Wales](https://epc.opendatacommunities.org/)
 <br> 
 

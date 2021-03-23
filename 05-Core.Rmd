@@ -4,34 +4,36 @@
 
 ### Read one large CSV file 
 
-(1) Read CSV file with header
-
+(1) Read a CSV file with header
+</center>
+![](pic/tranall.png)
+</center>
 ```{r}
 library(data.table)
-Sys.time()
+
 ##It will take around 3 mins to read in 5,732,838 records with 105 variables
 tran2<-fread("tranall2011_19.csv")
-Sys.time()
-```
-
-
-
-(2) Read CSV file without header
-
-```{r,echo = FALSE}
-
-#tran2<-fread("tranall2011_19.csv")
 
 ```
 
-(3) Read CSV file with the second row as header and dropping the first row
+
+
+(2) Read a CSV file without header
+
+```{r,eval=FALSE}
+
+tran2<-fread("tranall2011_19.csv",header=F)
+
+```
+
+(3) Read a CSV file with the second row as header and dropping the first row
 <center>
 
-![](sepc.png)
+![](pic/sepc.png)
 </center>
 ```{r}
 
-epcdata13<-read.csv("D_EPC_data_2020_Q3_extract_0221.csv", skip = 1)
+epcdata1<-fread("D_EPC_data_2012_Q4_extract_0221.csv", skip = 1)
 epcdata14<-read.csv("D_EPC_data_2020_Q4_extract_0221.csv", skip = 1)
 
 ```
@@ -40,26 +42,26 @@ epcdata14<-read.csv("D_EPC_data_2020_Q4_extract_0221.csv", skip = 1)
 ### Fast reading multiple EPC csv files together in R
 
 (1) Code for reading in EPCs in England and Wales
-```{r}
+```{r,eval=FALSE}
 ## assume all the unzipped EPC stored in EPC folder in D drive
 
 
-#x1 <- list.files(path = ".", pattern = NULL, all.files = FALSE,
-                 #full.names = FALSE, recursive = FALSE)
+x1 <- list.files(path = ".", pattern = NULL, all.files = FALSE,
+                 full.names = FALSE, recursive = FALSE)
 
 
-#datalist <- paste("D:/EPC",x1,"certificates.csv",sep="/")
+datalist <- paste("D:/EPC",x1,"certificates.csv",sep="/")
 
-#epcdata = data.table::rbindlist(lapply(datalist, data.table::fread, showProgress = FALSE))
+epcdata = data.table::rbindlist(lapply(datalist, data.table::fread, showProgress = FALSE))
 
 ```
 
 (2) Code for reading in EPCs in Scotland
 
-```{r}
-#datalist = list.files(pattern="*.csv")
+```{r,eval=FALSE}
+datalist = list.files(pattern="*.csv")
 
-#epcdata = data.table::rbindlist(lapply(datalist, data.table::fread, skip=1,showProgress = FALSE))
+epcdata = data.table::rbindlist(lapply(datalist, data.table::fread, skip=1,showProgress = FALSE))
 
 ```
 
@@ -71,9 +73,10 @@ epcdata14<-read.csv("D_EPC_data_2020_Q4_extract_0221.csv", skip = 1)
 
 class(tran2)
 
-needlist<-c("id","transactionid","postcode","price","dateoftransfer","propertytype","msoa11","laua","tfarea","numberrooms","priceper","CURRENT_ENERGY_EFFICIENCY","POTENTIAL_ENERGY_RATING","WALLS_ENERGY_EFF")
+needlist<-c("transactionid","postcode","price","dateoftransfer","propertytype","laua","lad11nm","tfarea","priceper","TRANSACTION_TYPE")
 
 tran2<-tran2[,..needlist]
+
 head(tran2)
 ```
 
@@ -82,72 +85,86 @@ head(tran2)
 #### Changing column names to lower case
 ```{r}
 
-#setnames(tran2, tolower(names(tran2)))
+setnames(tran2, tolower(names(tran2)))
+
+head(tran2)
 
 ```
 
 
 #### Changing column names to upper case
 
-```{r}
+```{r,eval=FALSE}
 
-#setnames(tran2, toupper(names(tran2)))
-
-```
-
-
-### Filter rows
-
-```{r}
-
-#setnames(tran2, toupper(names(tran2))) laua==
+setnames(tran2, toupper(names(tran2)))
 
 ```
 
-### Add in ID column
+
+### Filter rows based on conditions
+
 ```{r}
 
-#epcdata[, epcdataid := .I]
+tran2[laua=="E09000007", ]
 
+Camden<-tran2[laua=="E09000007", ]
+head(Camden)
+```
+
+### Add in the ID column
+```{r}
+
+Camden[,tranid := .I]
+head(Camden)
+
+#Camden[, tranid := .I+1000000]
 ```
 
 ### Convert datatable values to uppercase
 ```{r}
 
-#epcdata[,  `:=`(add1 = toupper(address1),
-               # add2 = toupper(address2),
-               # add3 = toupper(address3),
-                #add = toupper(address))]
-
+Camden[,  `:=`(tran_type = toupper(transaction_type))]
+head(Camden)
 ```
 
+### Delete columns
+
+
+```{r}
+
+Camden[,transaction_type:=NULL]
+
+head(Camden)
+```
+
+
+
 ### Join datasets
+
 ```{r}
 
 #epcdata<-rbind(epcdata13,epcdata14)
 
 ```
 
-
-### Get unique records
+### Remove Duplicates
 ```{r}
 
-#sepcdata<-unique(epcdata)
+dim(Camden)
+
+unique(Camden)
+
+dim(Camden)
 
 ```
 
 
 
-### Join datasets
-
-
-
 
 ### Write files
-```{r}
+```{r,eval=FALSE}
 
-#fwrite(tran2,"tran2.csv")
-
+fwrite(Camden,"Camden.csv")
 
 ```
 
@@ -155,21 +172,21 @@ head(tran2)
 
 ## Work with PostGIS database in R
 ### Write files to PostGIS
-```{r}
+```{r,eval=FALSE}
 
-#drv <- dbDriver("PostgreSQL")
-#con <- dbConnect(drv, dbname = "casa",port=5432, user="postgres",password=******)
-#dbWriteTable(con, "tran2",value=tran2, append = TRUE, row.names = FALSE)
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv, dbname = "casa",port=5432, user="postgres",password=******)
+dbWriteTable(con, "Camden",value=Camden, append = TRUE, row.names = FALSE)
 
 ```
 
 
 ### Read files from PostGIS
-```{r}
+```{r,eval=FALSE}
 
-#drv <- dbDriver("PostgreSQL")
-#con <- dbConnect(drv, dbname = "casa",port=5432, user="postgres",password=******)
-#tran<- dbGetQuery(con,"select * from tran2") 
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv, dbname = "casa",port=5432, user="postgres",password=******)
+tran<- dbGetQuery(con,"select * from Camden") 
 
 ```
 
