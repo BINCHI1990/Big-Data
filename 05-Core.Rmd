@@ -278,9 +278,9 @@ function1<- function(x,y){
 }
 
 link1<-function1(add,epc)
-dim(link1)
+
 link1u<- uniqueresult(link1)
-dim(link1u)
+
 })
 
 ```
@@ -288,7 +288,7 @@ dim(link1u)
 ***
 <center>
 
-![](pic/pro1.png)
+![](pic/first.png)
 </center>
 ***
 <center>
@@ -341,6 +341,6 @@ dim(link1u)
 ![](pic/2.png)
 </center>
 
-**Notes:** If you have any questions about Alteryx, [Steve](https://twitter.com/steven4320555) at [Billigence](https://billigence.com/solutions/business-intelligence/) would like to help.
+**Notes:** If you have any questions about Alteryx, [Steve Zhang](https://twitter.com/steven4320555) at [Billigence](https://billigence.com/solutions/business-intelligence/) would like to help.
 
 

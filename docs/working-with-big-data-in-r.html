@@ -556,7 +556,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb47-6"><a href="working-with-big-data-in-r.html#cb47-6" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb47-7"><a href="working-with-big-data-in-r.html#cb47-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-8"><a href="working-with-big-data-in-r.html#cb47-8" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.06696296 secs</code></pre>
+<pre><code>## Time difference of 0.03400588 secs</code></pre>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="working-with-big-data-in-r.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert data.table to data.frame</span></span>
 <span id="cb49-2"><a href="working-with-big-data-in-r.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setDF</span>(epcdata1)</span>
 <span id="cb49-3"><a href="working-with-big-data-in-r.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setDF</span>(epcdata14)</span>
@@ -566,7 +566,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb49-7"><a href="working-with-big-data-in-r.html#cb49-7" aria-hidden="true" tabindex="-1"></a>epcdata<span class="ot">&lt;-</span><span class="fu">rbind</span>(epcdata1,epcdata14)</span>
 <span id="cb49-8"><a href="working-with-big-data-in-r.html#cb49-8" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb49-9"><a href="working-with-big-data-in-r.html#cb49-9" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.07813215 secs</code></pre>
+<pre><code>## Time difference of 0.05296898 secs</code></pre>
 <div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="working-with-big-data-in-r.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert data.frame to data.table</span></span>
 <span id="cb51-2"><a href="working-with-big-data-in-r.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setDT</span>(epcdata14)</span>
 <span id="cb51-3"><a href="working-with-big-data-in-r.html#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setDT</span>(epcdata1)</span>
@@ -577,7 +577,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb51-8"><a href="working-with-big-data-in-r.html#cb51-8" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb51-9"><a href="working-with-big-data-in-r.html#cb51-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb51-10"><a href="working-with-big-data-in-r.html#cb51-10" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.0624969 secs</code></pre>
+<pre><code>## Time difference of 0.04297495 secs</code></pre>
 </div>
 <div id="profvis--an-interactive-profile-visualizations" class="section level3" number="4.4.2">
 <h3><span class="header-section-number">4.4.2</span> profvis- an interactive profile visualizations</h3>
@@ -605,13 +605,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb53-22"><a href="working-with-big-data-in-r.html#cb53-22" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb53-23"><a href="working-with-big-data-in-r.html#cb53-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-24"><a href="working-with-big-data-in-r.html#cb53-24" aria-hidden="true" tabindex="-1"></a>link1<span class="ot">&lt;-</span><span class="fu">function1</span>(add,epc)</span>
-<span id="cb53-25"><a href="working-with-big-data-in-r.html#cb53-25" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(link1)</span>
+<span id="cb53-25"><a href="working-with-big-data-in-r.html#cb53-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-26"><a href="working-with-big-data-in-r.html#cb53-26" aria-hidden="true" tabindex="-1"></a>link1u<span class="ot">&lt;-</span> <span class="fu">uniqueresult</span>(link1)</span>
-<span id="cb53-27"><a href="working-with-big-data-in-r.html#cb53-27" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(link1u)</span>
+<span id="cb53-27"><a href="working-with-big-data-in-r.html#cb53-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-28"><a href="working-with-big-data-in-r.html#cb53-28" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
 <hr />
 <center>
-<img src="pic/pro1.png" />
+<img src="pic/first.png" />
 </center>
 <hr />
 <center>
@@ -655,7 +655,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <center>
 <img src="pic/2.png" />
 </center>
-<p><strong>Notes:</strong> If you have any questions about Alteryx, <a href="https://twitter.com/steven4320555">Steve</a> at <a href="https://billigence.com/solutions/business-intelligence/">Billigence</a> would like to help.</p>
+<p><strong>Notes:</strong> If you have any questions about Alteryx, <a href="https://twitter.com/steven4320555">Steve Zhang</a> at <a href="https://billigence.com/solutions/business-intelligence/">Billigence</a> would like to help.</p>
 
 </div>
 </div>
