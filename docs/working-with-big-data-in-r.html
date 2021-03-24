@@ -556,7 +556,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb47-6"><a href="working-with-big-data-in-r.html#cb47-6" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb47-7"><a href="working-with-big-data-in-r.html#cb47-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-8"><a href="working-with-big-data-in-r.html#cb47-8" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.02998495 secs</code></pre>
+<pre><code>## Time difference of 0.06696296 secs</code></pre>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="working-with-big-data-in-r.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert data.table to data.frame</span></span>
 <span id="cb49-2"><a href="working-with-big-data-in-r.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setDF</span>(epcdata1)</span>
 <span id="cb49-3"><a href="working-with-big-data-in-r.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setDF</span>(epcdata14)</span>
@@ -566,7 +566,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb49-7"><a href="working-with-big-data-in-r.html#cb49-7" aria-hidden="true" tabindex="-1"></a>epcdata<span class="ot">&lt;-</span><span class="fu">rbind</span>(epcdata1,epcdata14)</span>
 <span id="cb49-8"><a href="working-with-big-data-in-r.html#cb49-8" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb49-9"><a href="working-with-big-data-in-r.html#cb49-9" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.03895402 secs</code></pre>
+<pre><code>## Time difference of 0.07813215 secs</code></pre>
 <div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="working-with-big-data-in-r.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert data.frame to data.table</span></span>
 <span id="cb51-2"><a href="working-with-big-data-in-r.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setDT</span>(epcdata14)</span>
 <span id="cb51-3"><a href="working-with-big-data-in-r.html#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setDT</span>(epcdata1)</span>
@@ -577,40 +577,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb51-8"><a href="working-with-big-data-in-r.html#cb51-8" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb51-9"><a href="working-with-big-data-in-r.html#cb51-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb51-10"><a href="working-with-big-data-in-r.html#cb51-10" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.02895999 secs</code></pre>
+<pre><code>## Time difference of 0.0624969 secs</code></pre>
 </div>
 <div id="profvis--an-interactive-profile-visualizations" class="section level3" number="4.4.2">
 <h3><span class="header-section-number">4.4.2</span> profvis- an interactive profile visualizations</h3>
 <div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="working-with-big-data-in-r.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">profvis</span>({</span>
 <span id="cb53-2"><a href="working-with-big-data-in-r.html#cb53-2" aria-hidden="true" tabindex="-1"></a>uniqueresult <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
-<span id="cb53-3"><a href="working-with-big-data-in-r.html#cb53-3" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb53-4"><a href="working-with-big-data-in-r.html#cb53-4" aria-hidden="true" tabindex="-1"></a>  dt <span class="ot">&lt;-</span> <span class="fu">as.data.table</span>(x)</span>
-<span id="cb53-5"><a href="working-with-big-data-in-r.html#cb53-5" aria-hidden="true" tabindex="-1"></a>  esummary<span class="ot">&lt;-</span>dt[,.(<span class="at">count=</span>.N),by<span class="ot">=</span>epcdataid]</span>
-<span id="cb53-6"><a href="working-with-big-data-in-r.html#cb53-6" aria-hidden="true" tabindex="-1"></a>  idd1 <span class="ot">&lt;-</span> esummary[esummary<span class="sc">$</span>count<span class="sc">==</span><span class="dv">1</span>,]</span>
-<span id="cb53-7"><a href="working-with-big-data-in-r.html#cb53-7" aria-hidden="true" tabindex="-1"></a>  result1 <span class="ot">&lt;-</span> x[x<span class="sc">$</span>epcdataid <span class="sc">%in%</span> idd1<span class="sc">$</span>epcdataid,]</span>
-<span id="cb53-8"><a href="working-with-big-data-in-r.html#cb53-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(result1)</span>
-<span id="cb53-9"><a href="working-with-big-data-in-r.html#cb53-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb53-10"><a href="working-with-big-data-in-r.html#cb53-10" aria-hidden="true" tabindex="-1"></a>function1<span class="ot">&lt;-</span> <span class="cf">function</span>(x,y){</span>
-<span id="cb53-11"><a href="working-with-big-data-in-r.html#cb53-11" aria-hidden="true" tabindex="-1"></a>  x<span class="ot">&lt;-</span>x[<span class="fu">is.na</span>(x<span class="sc">$</span>saotext),]</span>
-<span id="cb53-12"><a href="working-with-big-data-in-r.html#cb53-12" aria-hidden="true" tabindex="-1"></a>  x<span class="ot">&lt;-</span>x[<span class="fu">is.na</span>(x<span class="sc">$</span>subbuildingname),]</span>
-<span id="cb53-13"><a href="working-with-big-data-in-r.html#cb53-13" aria-hidden="true" tabindex="-1"></a>  x<span class="sc">$</span>bnstreet <span class="ot">&lt;-</span> <span class="fu">paste</span>(x<span class="sc">$</span>buildingnumber,x<span class="sc">$</span>streetdescription,<span class="at">sep=</span><span class="st">&quot;, &quot;</span>)</span>
-<span id="cb53-14"><a href="working-with-big-data-in-r.html#cb53-14" aria-hidden="true" tabindex="-1"></a>  x<span class="sc">$</span>bnstreet <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>, x<span class="sc">$</span>bnstreet)</span>
-<span id="cb53-15"><a href="working-with-big-data-in-r.html#cb53-15" aria-hidden="true" tabindex="-1"></a>  x<span class="sc">$</span>addressf <span class="ot">&lt;-</span> <span class="fu">paste</span>(x<span class="sc">$</span>postcodelocator,x<span class="sc">$</span>bnstreet,<span class="at">sep=</span><span class="st">&quot;, &quot;</span>)</span>
-<span id="cb53-16"><a href="working-with-big-data-in-r.html#cb53-16" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb53-17"><a href="working-with-big-data-in-r.html#cb53-17" aria-hidden="true" tabindex="-1"></a>  y<span class="sc">$</span>addressfinal <span class="ot">&lt;-</span> <span class="fu">trimws</span>(y<span class="sc">$</span>add)</span>
-<span id="cb53-18"><a href="working-with-big-data-in-r.html#cb53-18" aria-hidden="true" tabindex="-1"></a>  y<span class="sc">$</span>addressfinal <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>, y<span class="sc">$</span>addressfinal)</span>
-<span id="cb53-19"><a href="working-with-big-data-in-r.html#cb53-19" aria-hidden="true" tabindex="-1"></a>  y<span class="sc">$</span>addressf <span class="ot">&lt;-</span> <span class="fu">paste</span>(y<span class="sc">$</span>postcode,y<span class="sc">$</span>addressfinal,<span class="at">sep=</span><span class="st">&quot;, &quot;</span>)</span>
-<span id="cb53-20"><a href="working-with-big-data-in-r.html#cb53-20" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb53-21"><a href="working-with-big-data-in-r.html#cb53-21" aria-hidden="true" tabindex="-1"></a>  taba1 <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(x,y,<span class="at">by=</span><span class="st">&quot;addressf&quot;</span>)</span>
-<span id="cb53-22"><a href="working-with-big-data-in-r.html#cb53-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(taba1)</span>
-<span id="cb53-23"><a href="working-with-big-data-in-r.html#cb53-23" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb53-24"><a href="working-with-big-data-in-r.html#cb53-24" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb53-25"><a href="working-with-big-data-in-r.html#cb53-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-26"><a href="working-with-big-data-in-r.html#cb53-26" aria-hidden="true" tabindex="-1"></a>link1<span class="ot">&lt;-</span><span class="fu">function1</span>(add,epc)</span>
-<span id="cb53-27"><a href="working-with-big-data-in-r.html#cb53-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-28"><a href="working-with-big-data-in-r.html#cb53-28" aria-hidden="true" tabindex="-1"></a>link1<span class="ot">&lt;-</span> <span class="fu">uniqueresult</span>(link1)</span>
-<span id="cb53-29"><a href="working-with-big-data-in-r.html#cb53-29" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(link1)</span>
-<span id="cb53-30"><a href="working-with-big-data-in-r.html#cb53-30" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<span id="cb53-3"><a href="working-with-big-data-in-r.html#cb53-3" aria-hidden="true" tabindex="-1"></a>  dt <span class="ot">&lt;-</span> <span class="fu">as.data.table</span>(x)</span>
+<span id="cb53-4"><a href="working-with-big-data-in-r.html#cb53-4" aria-hidden="true" tabindex="-1"></a>  esummary<span class="ot">&lt;-</span>dt[,.(<span class="at">count=</span>.N),by<span class="ot">=</span>epcdataid]</span>
+<span id="cb53-5"><a href="working-with-big-data-in-r.html#cb53-5" aria-hidden="true" tabindex="-1"></a>  idd1 <span class="ot">&lt;-</span> esummary[esummary<span class="sc">$</span>count<span class="sc">==</span><span class="dv">1</span>,]</span>
+<span id="cb53-6"><a href="working-with-big-data-in-r.html#cb53-6" aria-hidden="true" tabindex="-1"></a>  result1 <span class="ot">&lt;-</span> x[x<span class="sc">$</span>epcdataid <span class="sc">%in%</span> idd1<span class="sc">$</span>epcdataid,]</span>
+<span id="cb53-7"><a href="working-with-big-data-in-r.html#cb53-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(result1)</span>
+<span id="cb53-8"><a href="working-with-big-data-in-r.html#cb53-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb53-9"><a href="working-with-big-data-in-r.html#cb53-9" aria-hidden="true" tabindex="-1"></a>function1<span class="ot">&lt;-</span> <span class="cf">function</span>(x,y){</span>
+<span id="cb53-10"><a href="working-with-big-data-in-r.html#cb53-10" aria-hidden="true" tabindex="-1"></a>  x<span class="ot">&lt;-</span>x[<span class="fu">is.na</span>(x<span class="sc">$</span>saotext),]</span>
+<span id="cb53-11"><a href="working-with-big-data-in-r.html#cb53-11" aria-hidden="true" tabindex="-1"></a>  x<span class="ot">&lt;-</span>x[<span class="fu">is.na</span>(x<span class="sc">$</span>subbuildingname),]</span>
+<span id="cb53-12"><a href="working-with-big-data-in-r.html#cb53-12" aria-hidden="true" tabindex="-1"></a>  x<span class="sc">$</span>bnstreet <span class="ot">&lt;-</span> <span class="fu">paste</span>(x<span class="sc">$</span>buildingnumber,x<span class="sc">$</span>streetdescription,<span class="at">sep=</span><span class="st">&quot;, &quot;</span>)</span>
+<span id="cb53-13"><a href="working-with-big-data-in-r.html#cb53-13" aria-hidden="true" tabindex="-1"></a>  x<span class="sc">$</span>bnstreet <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>, x<span class="sc">$</span>bnstreet)</span>
+<span id="cb53-14"><a href="working-with-big-data-in-r.html#cb53-14" aria-hidden="true" tabindex="-1"></a>  x<span class="sc">$</span>addressf <span class="ot">&lt;-</span> <span class="fu">paste</span>(x<span class="sc">$</span>postcodelocator,x<span class="sc">$</span>bnstreet,<span class="at">sep=</span><span class="st">&quot;, &quot;</span>)</span>
+<span id="cb53-15"><a href="working-with-big-data-in-r.html#cb53-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb53-16"><a href="working-with-big-data-in-r.html#cb53-16" aria-hidden="true" tabindex="-1"></a>  y<span class="sc">$</span>addressfinal <span class="ot">&lt;-</span> <span class="fu">trimws</span>(y<span class="sc">$</span>add)</span>
+<span id="cb53-17"><a href="working-with-big-data-in-r.html#cb53-17" aria-hidden="true" tabindex="-1"></a>  y<span class="sc">$</span>addressfinal <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>, y<span class="sc">$</span>addressfinal)</span>
+<span id="cb53-18"><a href="working-with-big-data-in-r.html#cb53-18" aria-hidden="true" tabindex="-1"></a>  y<span class="sc">$</span>addressf <span class="ot">&lt;-</span> <span class="fu">paste</span>(y<span class="sc">$</span>postcode,y<span class="sc">$</span>addressfinal,<span class="at">sep=</span><span class="st">&quot;, &quot;</span>)</span>
+<span id="cb53-19"><a href="working-with-big-data-in-r.html#cb53-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb53-20"><a href="working-with-big-data-in-r.html#cb53-20" aria-hidden="true" tabindex="-1"></a>  taba1 <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(x,y,<span class="at">by=</span><span class="st">&quot;addressf&quot;</span>)</span>
+<span id="cb53-21"><a href="working-with-big-data-in-r.html#cb53-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(taba1)</span>
+<span id="cb53-22"><a href="working-with-big-data-in-r.html#cb53-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb53-23"><a href="working-with-big-data-in-r.html#cb53-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-24"><a href="working-with-big-data-in-r.html#cb53-24" aria-hidden="true" tabindex="-1"></a>link1<span class="ot">&lt;-</span><span class="fu">function1</span>(add,epc)</span>
+<span id="cb53-25"><a href="working-with-big-data-in-r.html#cb53-25" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(link1)</span>
+<span id="cb53-26"><a href="working-with-big-data-in-r.html#cb53-26" aria-hidden="true" tabindex="-1"></a>link1u<span class="ot">&lt;-</span> <span class="fu">uniqueresult</span>(link1)</span>
+<span id="cb53-27"><a href="working-with-big-data-in-r.html#cb53-27" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(link1u)</span>
+<span id="cb53-28"><a href="working-with-big-data-in-r.html#cb53-28" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
 <hr />
 <center>
 <img src="pic/pro1.png" />
