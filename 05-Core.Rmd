@@ -254,10 +254,8 @@ end_time - start_time
 ### profvis- an interactive profile visualizations
 
 ```{r,eval=FALSE}
-
 profvis({
 uniqueresult <- function(x){
-  
   dt <- as.data.table(x)
   esummary<-dt[,.(count=.N),by=epcdataid]
   idd1 <- esummary[esummary$count==1,]
@@ -277,13 +275,12 @@ function1<- function(x,y){
   
   taba1 <- inner_join(x,y,by="addressf")
   return(taba1)
-  
 }
 
 link1<-function1(add,epc)
-
-link1<- uniqueresult(link1)
 dim(link1)
+link1u<- uniqueresult(link1)
+dim(link1u)
 })
 
 ```
