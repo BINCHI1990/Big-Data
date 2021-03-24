@@ -39,5 +39,5 @@ write-files-to-postgis
 read-files-from-postgis
 measure-code-performance
 measure-running-time-of-the-code
-section-1
+profvis--an-interactive-profile-visualizations
 execute-r-code-in-alteryx

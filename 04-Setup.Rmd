@@ -6,7 +6,6 @@ If you have installed the below packages already, you can jump to the next step.
 ```{r,eval=FALSE}
 install.packages("data.table")
 install.packages("dplyr")
-install.packages("sqldf")
 install.packages("RPostgreSQL")
 install.packages("profvis")
 ```
@@ -17,7 +16,6 @@ Load the packages for today's talk
 ```{r}
 
 library(data.table)
-library(sqldf)
 library(RPostgreSQL)
 library(dplyr)
 library(profvis)

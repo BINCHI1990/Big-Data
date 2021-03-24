@@ -188,10 +188,16 @@ dim(epc)
 ### Write files to PostGIS
 ```{r,eval=FALSE}
 
+# Loads the PostgreSQL driver
 drv <- dbDriver("PostgreSQL")
+# Creates a connection to the casa postGIS databas
 con <- dbConnect(drv, dbname = "casa",port=5432, user="postgres",password=******)
+
+# Write Camden to the database
 dbWriteTable(con, "Camden",value=Camden, append = TRUE, row.names = FALSE)
 
+# Delete some objects from workspace
+rm(Camden,tran2,epc,epcdata1,epcdata14,epcdata)
 ```
 
 
@@ -200,6 +206,8 @@ dbWriteTable(con, "Camden",value=Camden, append = TRUE, row.names = FALSE)
 
 drv <- dbDriver("PostgreSQL")
 con <- dbConnect(drv, dbname = "casa",port=5432, user="postgres",password=******)
+
+# load the data from PostGIS database
 tran<- dbGetQuery(con,"select * from Camden") 
 
 ```
@@ -243,29 +251,58 @@ end_time - start_time
 ```
 
 
-### 
+### profvis- an interactive profile visualizations
 
 ```{r,eval=FALSE}
-library(profvis)
 
+profvis({
 uniqueresult <- function(x){
   
   dt <- as.data.table(x)
-  
   esummary<-dt[,.(count=.N),by=epcdataid]
-  
   idd1 <- esummary[esummary$count==1,]
-  
   result1 <- x[x$epcdataid %in% idd1$epcdataid,]
-  
   return(result1)
 }
+function1<- function(x,y){
+  x<-x[is.na(x$saotext),]
+  x<-x[is.na(x$subbuildingname),]
+  x$bnstreet <- paste(x$buildingnumber,x$streetdescription,sep=", ")
+  x$bnstreet <- gsub(" ", "", x$bnstreet)
+  x$addressf <- paste(x$postcodelocator,x$bnstreet,sep=", ")
+  
+  y$addressfinal <- trimws(y$add)
+  y$addressfinal <- gsub(" ", "", y$addressfinal)
+  y$addressf <- paste(y$postcode,y$addressfinal,sep=", ")
+  
+  taba1 <- inner_join(x,y,by="addressf")
+  return(taba1)
+  
+}
 
+link1<-function1(add,epc)
 
-
+link1<- uniqueresult(link1)
+dim(link1)
+})
 
 ```
 
+***
+<center>
+
+![](pic/pro1.png)
+</center>
+***
+<center>
+
+![](pic/pro2.png)
+</center>
+***
+<center>
+
+![](pic/pro3.png)
+</center>
 
 
 ## Execute R code in Alteryx 

@@ -67,6 +67,10 @@
  -   [5 ways to measure running time of R code](https://www.r-bloggers.com/2017/05/5-ways-to-measure-running-time-of-r-code/)
     
  -   [Measuring performance](https://adv-r.hadley.nz/perf-measure.html#perf-measure)
+   
+ -   [Efficient optimisation](https://csgillespie.github.io/efficientR/performance.html)
+   
+ -   [Profvis — Interactive Visualizations for Profiling R Code](https://rstudio.github.io/profvis/)
   
  -   [Strategies to Speedup R Code](https://www.r-bloggers.com/2016/01/strategies-to-speedup-r-code/)
   
@@ -112,10 +116,18 @@
  -  [Land Registry Price Paid Data(PPD)](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads)
   
  -  [A new attribute-linked residential property price dataset for England and Wales 2011-2019](https://reshare.ukdataservice.ac.uk/854240/)
-  
+  <center>
+
+![](pic/data1.png)
+</center>
+
  - [Scottish Energy Performance Certificate Register](https://www.scottishepcregister.org.uk/)
   
  - [Scottish Domestic Energy Performance Certificates](https://statistics.gov.scot/data/domestic-energy-performance-certificates)
+   <center>
+
+![](pic/data2.png)
+</center>
   
  -  [Scottish Non-domestic Energy Performance Certificates](https://statistics.gov.scot/data/non-domestic-energy-performance-certificates)
       
@@ -123,11 +135,11 @@
     
  - [Big Data: Wrangling 4.6M Rows with dtplyr](https://www.business-science.io/code-tools/2019/08/15/big-data-dtplyr.html)
   
- -  [Big Data Analytics with R](https://www.dropbox.com/sh/4m63647jbg7a1yy/AACa5TqdjBwOwchOpOa9s_Pda)
+ - [Big Data Analytics with R](https://www.dropbox.com/sh/4m63647jbg7a1yy/AACa5TqdjBwOwchOpOa9s_Pda)
   
- -  [R and Hadoop Data Analytics - RHadoop](https://dzone.com/articles/r-and-hadoop-data-analytics)
+ - [R and Hadoop Data Analytics - RHadoop](https://dzone.com/articles/r-and-hadoop-data-analytics)
   
- -  [R and Hadoop: Step-by-step tutorials](https://blog.revolutionanalytics.com/2012/03/r-and-hadoop-step-by-step-tutorials.html) 
+ - [R and Hadoop: Step-by-step tutorials](https://blog.revolutionanalytics.com/2012/03/r-and-hadoop-step-by-step-tutorials.html) 
   
  -  [Mastering Spark with R](https://therinspark.com/)  
   
