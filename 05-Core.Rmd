@@ -248,6 +248,21 @@ end_time - start_time
 ```{r,eval=FALSE}
 library(profvis)
 
+uniqueresult <- function(x){
+  
+  dt <- as.data.table(x)
+  
+  esummary<-dt[,.(count=.N),by=epcdataid]
+  
+  idd1 <- esummary[esummary$count==1,]
+  
+  result1 <- x[x$epcdataid %in% idd1$epcdataid,]
+  
+  return(result1)
+}
+
+
+
 
 ```
 
