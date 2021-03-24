@@ -3,10 +3,12 @@
 ## Installing packages
 
 If you have installed the below packages already, you can jump to the next step.
-```{r}
-#install.packages("data.table")
-#install.packages("dplyr")
-#install.packages("RPostgreSQL")
+```{r,eval=FALSE}
+install.packages("data.table")
+install.packages("dplyr")
+install.packages("sqldf")
+install.packages("RPostgreSQL")
+install.packages("profvis")
 ```
 
 
@@ -15,96 +17,96 @@ Load the packages for today's talk
 ```{r}
 
 library(data.table)
-#library(dtplyr)
 library(sqldf)
 library(RPostgreSQL)
 library(dplyr)
+library(profvis)
 
 ```
 
 ## Install PostGIS and Alteryx software
 ### Install PostGIS
-(1) Step 1: download the PostgreSQL
++ Step 1: download the PostgreSQL
 <center>
 
 ![](pic/post1.png)
 </center>
 
 
-(2) Step 2: select the right version for your system
++ Step 2: select the right version for your system
 <center>
 
 ![](pic/post2.png)
 </center>
-(3) Step 3: download the installer
++  Step 3: download the installer
 <center>
 
 ![](pic/post3.png)
 </center>
-(4) Step 4: download the software
++  Step 4: download the software
 <center>
 
 ![](pic/post4.png)
 </center>
-(5) Step 5: install the PostgreSQL
++ Step 5: install the PostgreSQL
 <center>
 
 ![](pic/post5.png)
 </center>
-(6) Step 6: set the password
++  Step 6: set the password
 <center>
 
 ![](pic/post6.png)
 </center>
-(7) Step 7: select the port number
++  Step 7: select the port number
 <center>
 
 ![](pic/post7.png)
 </center>
-(8) Step 8: click the Stack Builder
++  Step 8: click the Stack Builder
 <center>
 
 ![](pic/post8.png)
 </center>
-(9) Step 9: choose the PostgreSQL for additional installation
++  Step 9: choose the PostgreSQL for additional installation
 <center>
 
 ![](pic/post9.png)
 </center>
-(10) Step 10: install the spatial extension
++  Step 10: install the spatial extension
 <center>
 
 ![](pic/post10.png)
 </center>
-(10) Step 10: create a postGIS database
++  Step 11: create a postGIS database
 <center>
 
 ![](pic/post11.png)
 </center>
 
-(12) Step 12: Enter the password
++  Step 12: Enter the password
 <center>
 
 ![](pic/post12.png)
 </center>
 
-(13) Step 13: set the database name
++ Step 13: set the database name
 <center>
 
 ![](pic/post13.png)
 </center>
-(14) Step 14: Finish
++  Step 14: Finish
 <center>
 
 ![](pic/post14.png)
 </center>
-
+***
 You will find a PostGIS database names as casa in your postgreSQL
 <center>
 
 ![](pic/post15.png)
 </center>
-**Note:** you can firstly create a database in PostgreSQL and then extent it to PostGIS database([Enabling PostGIS](https://postgis.net/install/))
+**The second approch:** create a database in PostgreSQL + extent it to PostGIS database ([Enabling PostGIS](https://postgis.net/install/))
 <center>
 
 ![](pic/postold.png)

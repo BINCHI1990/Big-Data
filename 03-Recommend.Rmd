@@ -1,13 +1,11 @@
 # Recommended resources
-<br> 
   
 ## Resources for handling big data in R
-<br><br>
   
  -   [Handling large data sets in R](https://rpubs.com/msundar/large_data_analysis)
 <br><br>
 
-> Notes:
+> **Notes:**
 >
 > Medium sized datasets (< 2 GB):loaded in R ( within memory limit but processing is cumbersome (typically in the 1-2 GB range )
 >
@@ -22,7 +20,7 @@
  -   [Five ways to handle Big Data in R](https://www.r-bloggers.com/2013/11/five-ways-to-handle-big-data-in-r/)
 <br><br>
 
-> Notes:
+> **Notes:**
 >
 > Rule of thumb:
 >
@@ -33,133 +31,106 @@
 > Data sets that contain more than one billion records need to be analyzed by map reduce algorithms. 
  
  -   [Efficient data carpentry](https://csgillespie.github.io/efficientR/data-carpentry.html)
-<br><br> 
-
- -   [Big Data Analytics with R](https://www.dropbox.com/sh/4m63647jbg7a1yy/AACa5TqdjBwOwchOpOa9s_Pda)
-<br><br> 
- 
-
- -   [R Performance Tuning | Learn Tips to Improve Speed & Memory of R Programs](https://data-flair.training/blogs/r-performance-tuning-techniques/)
-<br><br> 
-
-
-
+    
  -   [Getting Started With Parallel Programming In R](https://towardsdatascience.com/getting-started-with-parallel-programming-in-r-d5f801d43745)
-<br><br>
+  
 
  -   [Efficiency in Joining Two Data Frames](https://www.r-bloggers.com/2013/01/efficiency-in-joining-two-data-frames/)
-<br><br>
-
-
+  
  -   [For large tables in R dplyr's function inner_join() is much faster than merge()](http://zevross.com/blog/2014/04/30/mini-post-for-large-tables-in-r-dplyrs-function-inner_join-is-much-faster-than-merge/)
-<br><br>
-
-
+  
  -   [BASE R, THE TIDYVERSE, AND DATA.TABLE: A COMPARISON OF R DIALECTS TO WRANGLE YOUR DATA](https://wetlandscapes.com/blog/a-comparison-of-r-dialects/)
-<br><br>
-
+  
  -   [Speed comparison of rbind, bind_rows, and rbindlist](https://rstudio-pubs-static.s3.amazonaws.com/406521_7fc7b6c1dc374e9b8860e15a699d8bb0.html)
-<br><br>
-
-
-
+ 
+> rbindlist() is the fastest method and rbind() is the slowest. bind_rows() is half as fast as rbindlist()
+  
 ## Resources for the data.table package
-<br><br>
+  
  -   [Data Transformation with data.table : : CHEAT SHEET](file:///C:/Users/casa-alienware%20Bin%20C/Documents/Downloads/datatable%20(6).pdf)
-<br>
+  
  -   [A data.table and dplyr tour](https://atrebas.github.io/post/2019-03-03-datatable-dplyr/)
-<br>
+  
  -   [Blazing Fast Data Wrangling With R data.table](https://towardsdatascience.com/blazing-fast-data-wrangling-with-r-data-table-de5045cc4b4d)
-<br>
-
+  
  -   [data.table in R – The Complete Beginners Guide](https://www.machinelearningplus.com/data-manipulation/datatable-in-r-complete-guide/)
-<br>
+  
  -   [Advanced tips and tricks with data.table](http://brooksandrew.github.io/simpleblog/articles/advanced-data-table/)
-<br>
+  
  -   [Advanced-Data Wrangling In R — 4](https://medium.com/analytics-vidhya/advanced-data-wrangling-in-r-4-f98693b92851)
-<br>
+  
 
  -   [R : DATA.TABLE TUTORIAL (WITH 50 EXAMPLES)](https://www.listendata.com/2016/10/r-data-table.html)
-<br>
-
-
-## Resouces for dtplyr package
-<br><br>
- - [Big Data: Wrangling 4.6M Rows with dtplyr](https://www.business-science.io/code-tools/2019/08/15/big-data-dtplyr.html)
-<br>
- -  [GOOGLE](https://www.google.com/)
-<br>
-
-
+  
 ## Resources for measuring R performance
-<br><br>
+   
+ -   [5 ways to measure running time of R code](https://www.r-bloggers.com/2017/05/5-ways-to-measure-running-time-of-r-code/)
+    
  -   [Measuring performance](https://adv-r.hadley.nz/perf-measure.html#perf-measure)
-<br>
-
+  
  -   [Strategies to Speedup R Code](https://www.r-bloggers.com/2016/01/strategies-to-speedup-r-code/)
-<br>
-
+  
  -   [R Code Optimizer](https://rpubs.com/IACCancu/462493)
-<br>
-
+  
  -   [Strategies to Speedup R Code](https://www.r-bloggers.com/2016/01/strategies-to-speedup-r-code/)
-<br>
-
-
+   
+ -   [R Performance Tuning | Learn Tips to Improve Speed & Memory of R Programs](https://data-flair.training/blogs/r-performance-tuning-techniques/)
+  
 ## Resources for PostGIS software
-<br><br>
+  
  -   [About PostGIS](https://postgis.net/)
-<br>
-
+  
  -   [Install Postgres/PostGIS and get started with spatial SQL](http://zevross.com/blog/2019/12/04/install-postgres-postgis-and-get-started-with-spatial-sql/)
-<br>
-
+  
  -   [Enabling PostGIS](https://postgis.net/install/)
-<br>
-
+  
 >PostGIS is an optional extension that must be enabled in each database you want to use it in before you can use it.
-
+  
 ## Resources for Alteryx softwware
-<br><br>
--   [What is Alteryx?](https://www.youtube.com/watch?v=F8MSnofnItM)
-<br>
-
+  
+ -   [What is Alteryx?](https://www.youtube.com/watch?v=F8MSnofnItM)
+  
  -   [Data Cleansing in Alteryx for Beginners](https://www.youtube.com/watch?v=FzefmS9Fu7Y)
-<br>
-
+  
  -   [Integrating R in Alteryx](https://www.theinformationlab.co.uk/2018/11/12/integrating-r-in-alteryx/)
-<br>
-
+  
  -   [Alteryx - Bring Your Own R Code](https://www.youtube.com/watch?v=nVYLRM-mbtk)
-<br>
-
+  
  -   [How do I Import & Union Multiple Excel Files with Alteryx](https://www.youtube.com/watch?v=MjGxzsMJINQ)
-<br>
-
+  
  -   [The Union tool in Alteryx](https://www.youtube.com/watch?v=v8xS0wrU6JA)
-<br>
-
+  
  -   [The unique tool in Alteryx](https://www.youtube.com/watch?v=ueLeDn85E98)
-<br>
-
+  
  -   [How to Connect Alteryx to PostgreSQL](https://www.youtube.com/watch?v=RDly0ycZ2IE)
-<br>
-
-
-
+  
 ## Datasets
-<br><br>
+  
  -  [Energy Performance of Buildings Data: England and Wales](https://epc.opendatacommunities.org/)
-<br> 
+  
 
  -  [Land Registry Price Paid Data(PPD)](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads)
-<br> 
-
+  
  -  [A new attribute-linked residential property price dataset for England and Wales 2011-2019](https://reshare.ukdataservice.ac.uk/854240/)
- <br> 
-  - [Scottish Energy Performance Certificate Register](https://www.scottishepcregister.org.uk/)
-<br>
+  
+ - [Scottish Energy Performance Certificate Register](https://www.scottishepcregister.org.uk/)
+  
  - [Scottish Domestic Energy Performance Certificates](https://statistics.gov.scot/data/domestic-energy-performance-certificates)
-<br>
+  
  -  [Scottish Non-domestic Energy Performance Certificates](https://statistics.gov.scot/data/non-domestic-energy-performance-certificates)
-<br>
+      
+## Extensions
+    
+ - [Big Data: Wrangling 4.6M Rows with dtplyr](https://www.business-science.io/code-tools/2019/08/15/big-data-dtplyr.html)
+  
+ -  [Big Data Analytics with R](https://www.dropbox.com/sh/4m63647jbg7a1yy/AACa5TqdjBwOwchOpOa9s_Pda)
+  
+ -  [R and Hadoop Data Analytics - RHadoop](https://dzone.com/articles/r-and-hadoop-data-analytics)
+  
+ -  [R and Hadoop: Step-by-step tutorials](https://blog.revolutionanalytics.com/2012/03/r-and-hadoop-step-by-step-tutorials.html) 
+  
+ -  [Mastering Spark with R](https://therinspark.com/)  
+  
+ -  [Hadoop Vs Spark - Detailed Comparison](https://phoenixnap.com/kb/hadoop-vs-spark) 
+   
+ -  [GOOGLE](https://www.google.com/)

@@ -55,18 +55,18 @@ h3 {
   
 }
 h4{
-  font-size: 1.5em;
+  font-size: 22px;
   font-weight:500;
   font-family: "lato";
 
 }
 h5{
   font-family: "lato";
- font-size: 1.5em;
+ font-size: 22px;
 }
 
 body {
- font-size: 1.5em;
+font-size: 22px;
   font-family: "lato";
   
 }
@@ -80,4 +80,5 @@ code.r{ /* Code block */
   font-weight: bold;
   text-align: center;
   font-family: "lato";
+  font-style: normal;
 }
