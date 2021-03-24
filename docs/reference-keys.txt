@@ -16,7 +16,12 @@ install-alteryx
 working-with-big-data-in-r
 read-in-csv-files
 read-one-large-csv-file
+read-a-csv-file-with-header
+read-a-csv-file-without-header
+read-a-csv-file-with-the-second-row-as-header-and-dropping-the-first-row
 fast-reading-multiple-epc-csv-files-together-in-r
+code-for-reading-in-epcs-in-england-and-wales
+code-for-reading-in-epcs-in-scotland
 basic-larger-dataset-mungingwrangling
 select-columns
 changing-column-names-to-lower-case-or-upper-case

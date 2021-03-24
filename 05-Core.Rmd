@@ -4,7 +4,7 @@
 
 ### Read one large CSV file 
 
-(1) Read a CSV file with header
+#### Read a CSV file with header
 </center>
 ![](pic/tranall.png)
 </center>
@@ -18,7 +18,7 @@ tran2<-fread("tranall2011_19.csv")
 
 
 
-(2) Read a CSV file without header
+#### Read a CSV file without header
 
 ```{r,eval=FALSE}
 
@@ -26,7 +26,7 @@ tran2<-fread("tranall2011_19.csv",header=F)
 
 ```
 
-(3) Read a CSV file with the second row as header and dropping the first row
+#### Read a CSV file with the second row as header and dropping the first row
 <center>
 
 ![](pic/sepc.png)
@@ -41,7 +41,7 @@ epcdata14<-read.csv("D_EPC_data_2020_Q4_extract_0221.csv", skip = 1)
 
 ### Fast reading multiple EPC csv files together in R
 
-(1) Code for reading in EPCs in England and Wales
+#### Code for reading in EPCs in England and Wales
 ```{r,eval=FALSE}
 ## assume all the unzipped EPC stored in EPC folder in D drive
 
@@ -56,7 +56,7 @@ epcdata = data.table::rbindlist(lapply(datalist, data.table::fread, showProgress
 
 ```
 
-(2) Code for reading in EPCs in Scotland
+#### Code for reading in EPCs in Scotland
 
 ```{r,eval=FALSE}
 datalist = list.files(pattern="*.csv")
@@ -161,25 +161,25 @@ fwrite(Camden,"Camden.csv")
 
 ```{r}
 
-##bind by names
+# Bind by names
 class(epcdata1)
 class(epcdata14)
 
-#convert data.frame to data.table
+# Convert data.frame to data.table
 setDT(epcdata14)
 
 
-#select columns
+# Select columns
 needlist<- c("BUILDING_REFERENCE_NUMBER","OSG_REFERENCE_NUMBER","ADDRESS1","ADDRESS2","ADDRESS3","POSTCODE","INSPECTION_DATE","LODGEMENT_DATE","PROPERTY_TYPE","TYPE_OF_ASSESSMENT","TRANSACTION_TYPE","TOTAL_FLOOR_AREA","NUMBER_HABITABLE_ROOMS","CURRENT_ENERGY_EFFICIENCY","POTENTIAL_ENERGY_EFFICIENCY")
 
 epcdata1<-epcdata1[,..needlist]
 epcdata14<-epcdata14[,..needlist]
 
-#bind by names
+# Bind by names
 l = list(epcdata1,epcdata14)
 epc<- rbindlist(l, use.names=TRUE)
 
-#Remove Duplicates
+# Remove Duplicates
 dim(epc)
 unique(epc)
 dim(epc)
@@ -212,7 +212,7 @@ tran<- dbGetQuery(con,"select * from Camden")
 class(epc)
 # Delete the epc object
 rm(epc)
-#bind by names
+# Bind by names
 start_time <- Sys.time()
 epc<-rbindlist(list(epcdata1,epcdata14),use.names=TRUE)
 end_time <- Sys.time()
@@ -229,11 +229,11 @@ epcdata<-rbind(epcdata1,epcdata14)
 end_time <- Sys.time()
 end_time - start_time
 
-#convert data.frame to data.table
+# Convert data.frame to data.table
 setDT(epcdata14)
 setDT(epcdata1)
 
-# combine two data tables by position
+# Combine two data tables by position
 start_time <- Sys.time()
 epc<-rbindlist(list(epcdata1,epcdata14))
 end_time <- Sys.time()
@@ -243,7 +243,7 @@ end_time - start_time
 ```
 
 
-###
+### 
 
 ```{r,eval=FALSE}
 library(profvis)
@@ -254,7 +254,44 @@ library(profvis)
 
 
 ## Execute R code in Alteryx 
+<center>
 
-Notes: 
+![](pic/alt1.png)
+</center>
+
++ Step 1: build a workflow in Alteryx
+
+<center>
+
+![](pic/alt2.png)
+</center>
+
++ Step 2: create R code in the Alteryx
+
+<center>
+
+![](pic/alt3.png)
+</center>
+
++ Step 3: Click the use AMP engine and run the workflow
+
+<center>
+
+![](pic/alt5.png)
+</center>
+
++ Step 4: Finish
+
+<center>
+
+![](pic/1.png)
+</center>
+
+<center>
+
+![](pic/2.png)
+</center>
+
+**Notes:** If you have any questions about Alteryx, [Steve](https://twitter.com/steven4320555) at [Billigence](https://billigence.com/solutions/business-intelligence/) would like to help.
 
 
