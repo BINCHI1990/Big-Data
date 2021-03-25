@@ -222,17 +222,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="loading-packages" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Loading packages</h2>
 <p>Load the packages for today’s talk</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="getting-started.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
-<span id="cb2-2"><a href="getting-started.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RPostgreSQL)</span>
-<span id="cb2-3"><a href="getting-started.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb2-4"><a href="getting-started.html#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(profvis)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="getting-started.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span></code></pre></div>
+<pre><code>## data.table 1.13.2 using 8 threads (see ?getDTthreads).  Latest news: r-datatable.com</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="getting-started.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RPostgreSQL)</span></code></pre></div>
+<pre><code>## Loading required package: DBI</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="getting-started.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:data.table&#39;:
+## 
+##     between, first, last</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="getting-started.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(profvis)</span></code></pre></div>
 </div>
 <div id="install-postgis-and-alteryx-software" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Install PostGIS and Alteryx software</h2>
 <div id="install-postgis" class="section level3" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> Install PostGIS</h3>
 <ul>
-<li>Step 1: download the PostgreSQL
+<li>Step 1: download the <a href="https://www.postgresql.org/">PostgreSQL</a>
 <center></li>
 </ul>
 <img src="pic/post1.png" />

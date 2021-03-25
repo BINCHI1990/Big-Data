@@ -24,7 +24,7 @@ library(profvis)
 
 ## Install PostGIS and Alteryx software
 ### Install PostGIS
-+ Step 1: download the PostgreSQL
++ Step 1: download the [PostgreSQL](https://www.postgresql.org/)
 <center>
 
 ![](pic/post1.png)
