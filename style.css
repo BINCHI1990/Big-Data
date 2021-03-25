@@ -62,17 +62,17 @@ h4{
 }
 h5{
   font-family: "lato";
- font-size: 24px;
+ font-size: 26px;
 }
 
 body {
-font-size: 24px;
+font-size: 26px;
   font-family: "lato";
   
 }
 
 code.r{ /* Code block */
-    font-size: 23px;
+    font-size: 26px;
 }
 
 .author, .date {

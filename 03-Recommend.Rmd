@@ -80,7 +80,7 @@
    
  -   [R Performance Tuning | Learn Tips to Improve Speed & Memory of R Programs](https://data-flair.training/blogs/r-performance-tuning-techniques/)
   
-## Resources for PostGIS software
+## Resources for PostGIS database
   
  -   [About PostGIS](https://postgis.net/)
   
@@ -90,7 +90,7 @@
   
 >PostGIS is an optional extension that must be enabled in each database you want to use it in before you can use it.
   
-## Resources for Alteryx softwware
+## Resources for Alteryx software
   
  -   [What is Alteryx?](https://www.youtube.com/watch?v=F8MSnofnItM)
   
@@ -110,9 +110,10 @@
   
 ## Datasets
   
+ -  [Research data](https://reflect.ucl.ac.uk/casahousing/2021/01/11/research-data/)
+  
  -  [Energy Performance of Buildings Data: England and Wales](https://epc.opendatacommunities.org/)
   
-
  -  [Land Registry Price Paid Data(PPD)](https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads)
   
  -  [A new attribute-linked residential property price dataset for England and Wales 2011-2019](https://reshare.ukdataservice.ac.uk/854240/)

@@ -140,8 +140,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1" data-path="recommended-resources.html"><a href="recommended-resources.html#resources-for-handling-big-data-in-r"><i class="fa fa-check"></i><b>2.1</b> Resources for handling big data in R</a></li>
 <li class="chapter" data-level="2.2" data-path="recommended-resources.html"><a href="recommended-resources.html#resources-for-the-data.table-package"><i class="fa fa-check"></i><b>2.2</b> Resources for the data.table package</a></li>
 <li class="chapter" data-level="2.3" data-path="recommended-resources.html"><a href="recommended-resources.html#resources-for-measuring-r-performance"><i class="fa fa-check"></i><b>2.3</b> Resources for measuring R performance</a></li>
-<li class="chapter" data-level="2.4" data-path="recommended-resources.html"><a href="recommended-resources.html#resources-for-postgis-software"><i class="fa fa-check"></i><b>2.4</b> Resources for PostGIS software</a></li>
-<li class="chapter" data-level="2.5" data-path="recommended-resources.html"><a href="recommended-resources.html#resources-for-alteryx-softwware"><i class="fa fa-check"></i><b>2.5</b> Resources for Alteryx softwware</a></li>
+<li class="chapter" data-level="2.4" data-path="recommended-resources.html"><a href="recommended-resources.html#resources-for-postgis-database"><i class="fa fa-check"></i><b>2.4</b> Resources for PostGIS database</a></li>
+<li class="chapter" data-level="2.5" data-path="recommended-resources.html"><a href="recommended-resources.html#resources-for-alteryx-software"><i class="fa fa-check"></i><b>2.5</b> Resources for Alteryx software</a></li>
 <li class="chapter" data-level="2.6" data-path="recommended-resources.html"><a href="recommended-resources.html#datasets"><i class="fa fa-check"></i><b>2.6</b> Datasets</a></li>
 <li class="chapter" data-level="2.7" data-path="recommended-resources.html"><a href="recommended-resources.html#extensions"><i class="fa fa-check"></i><b>2.7</b> Extensions</a></li>
 </ul></li>
@@ -169,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.3" data-path="working-with-big-data-in-r.html"><a href="working-with-big-data-in-r.html#filter-rows-based-on-conditions"><i class="fa fa-check"></i><b>4.2.3</b> Filter rows based on conditions</a></li>
 <li class="chapter" data-level="4.2.4" data-path="working-with-big-data-in-r.html"><a href="working-with-big-data-in-r.html#add-in-the-id-column"><i class="fa fa-check"></i><b>4.2.4</b> Add in the ID column</a></li>
 <li class="chapter" data-level="4.2.5" data-path="working-with-big-data-in-r.html"><a href="working-with-big-data-in-r.html#convert-datatable-values-to-uppercase"><i class="fa fa-check"></i><b>4.2.5</b> Convert datatable values to uppercase</a></li>
-<li class="chapter" data-level="4.2.6" data-path="working-with-big-data-in-r.html"><a href="working-with-big-data-in-r.html#delete-columns"><i class="fa fa-check"></i><b>4.2.6</b> Delete columns</a></li>
+<li class="chapter" data-level="4.2.6" data-path="working-with-big-data-in-r.html"><a href="working-with-big-data-in-r.html#delete-a-column"><i class="fa fa-check"></i><b>4.2.6</b> Delete a column</a></li>
 <li class="chapter" data-level="4.2.7" data-path="working-with-big-data-in-r.html"><a href="working-with-big-data-in-r.html#remove-duplicates"><i class="fa fa-check"></i><b>4.2.7</b> Remove Duplicates</a></li>
 <li class="chapter" data-level="4.2.8" data-path="working-with-big-data-in-r.html"><a href="working-with-big-data-in-r.html#write-files"><i class="fa fa-check"></i><b>4.2.8</b> Write files</a></li>
 <li class="chapter" data-level="4.2.9" data-path="working-with-big-data-in-r.html"><a href="working-with-big-data-in-r.html#bind-datasets"><i class="fa fa-check"></i><b>4.2.9</b> Bind datasets</a></li>
@@ -220,10 +220,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </center>
 <img src="pic/tranall.png" />
 </center>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="working-with-big-data-in-r.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
-<span id="cb3-2"><a href="working-with-big-data-in-r.html#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="working-with-big-data-in-r.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="do">##It will take around 3 mins to read in 5,732,838 records with 105 variables</span></span>
-<span id="cb3-4"><a href="working-with-big-data-in-r.html#cb3-4" aria-hidden="true" tabindex="-1"></a>tran2<span class="ot">&lt;-</span><span class="fu">fread</span>(<span class="st">&quot;tranall2011_19.csv&quot;</span>)</span></code></pre></div>
+<ul>
+<li><a href="https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs">Explanations of important fields in the new attribute-linked residential property price dataset</a></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="working-with-big-data-in-r.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">##It will take around 3 mins to read in 5,732,838 records with 105 variables</span></span>
+<span id="cb3-2"><a href="working-with-big-data-in-r.html#cb3-2" aria-hidden="true" tabindex="-1"></a>tran2<span class="ot">&lt;-</span><span class="fu">fread</span>(<span class="st">&quot;tranall2011_19.csv&quot;</span>)</span></code></pre></div>
 </div>
 <div id="read-a-csv-file-without-header" class="section level4" number="4.1.1.2">
 <h4><span class="header-section-number">4.1.1.2</span> Read a CSV file without header</h4>
@@ -397,8 +398,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5:    marketed sale      5    MARKETED SALE
 ## 6:    marketed sale      6    MARKETED SALE</code></pre>
 </div>
-<div id="delete-columns" class="section level3" number="4.2.6">
-<h3><span class="header-section-number">4.2.6</span> Delete columns</h3>
+<div id="delete-a-column" class="section level3" number="4.2.6">
+<h3><span class="header-section-number">4.2.6</span> Delete a column</h3>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="working-with-big-data-in-r.html#cb24-1" aria-hidden="true" tabindex="-1"></a>Camden[,transaction_type<span class="sc">:</span><span class="er">=</span><span class="cn">NULL</span>]</span>
 <span id="cb24-2"><a href="working-with-big-data-in-r.html#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-3"><a href="working-with-big-data-in-r.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(Camden)</span></code></pre></div>
@@ -556,7 +557,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb47-6"><a href="working-with-big-data-in-r.html#cb47-6" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb47-7"><a href="working-with-big-data-in-r.html#cb47-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-8"><a href="working-with-big-data-in-r.html#cb47-8" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.008965015 secs</code></pre>
+<pre><code>## Time difference of 0.646657 secs</code></pre>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="working-with-big-data-in-r.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert data.table to data.frame</span></span>
 <span id="cb49-2"><a href="working-with-big-data-in-r.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setDF</span>(epcdata1)</span>
 <span id="cb49-3"><a href="working-with-big-data-in-r.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setDF</span>(epcdata14)</span>
@@ -566,7 +567,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb49-7"><a href="working-with-big-data-in-r.html#cb49-7" aria-hidden="true" tabindex="-1"></a>epcdata<span class="ot">&lt;-</span><span class="fu">rbind</span>(epcdata1,epcdata14)</span>
 <span id="cb49-8"><a href="working-with-big-data-in-r.html#cb49-8" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb49-9"><a href="working-with-big-data-in-r.html#cb49-9" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.01802301 secs</code></pre>
+<pre><code>## Time difference of 0.0146811 secs</code></pre>
 <div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="working-with-big-data-in-r.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert data.frame to data.table</span></span>
 <span id="cb51-2"><a href="working-with-big-data-in-r.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setDT</span>(epcdata14)</span>
 <span id="cb51-3"><a href="working-with-big-data-in-r.html#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setDT</span>(epcdata1)</span>
@@ -577,7 +578,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb51-8"><a href="working-with-big-data-in-r.html#cb51-8" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb51-9"><a href="working-with-big-data-in-r.html#cb51-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb51-10"><a href="working-with-big-data-in-r.html#cb51-10" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.008991957 secs</code></pre>
+<pre><code>## Time difference of 0.006995201 secs</code></pre>
 </div>
 <div id="profvis--an-interactive-profile-visualizations" class="section level3" number="4.4.2">
 <h3><span class="header-section-number">4.4.2</span> profvis- an interactive profile visualizations</h3>

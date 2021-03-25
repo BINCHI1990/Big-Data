@@ -8,8 +8,8 @@
 </center>
 ![](pic/tranall.png)
 </center>
++ [Explanations of important fields in the new attribute-linked residential property price dataset](https://github.com/BINCHI1990/Link-LR-PPD-and-Domestic-EPCs)
 ```{r}
-library(data.table)
 
 ##It will take around 3 mins to read in 5,732,838 records with 105 variables
 tran2<-fread("tranall2011_19.csv")
@@ -127,7 +127,7 @@ Camden[,  `:=`(tran_type = toupper(transaction_type))]
 head(Camden)
 ```
 
-### Delete columns
+### Delete a column
 
 
 ```{r}

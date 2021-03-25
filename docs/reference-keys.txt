@@ -3,8 +3,8 @@ recommended-resources
 resources-for-handling-big-data-in-r
 resources-for-the-data.table-package
 resources-for-measuring-r-performance
-resources-for-postgis-software
-resources-for-alteryx-softwware
+resources-for-postgis-database
+resources-for-alteryx-software
 datasets
 extensions
 getting-started
@@ -30,7 +30,7 @@ changing-column-names-to-upper-case
 filter-rows-based-on-conditions
 add-in-the-id-column
 convert-datatable-values-to-uppercase
-delete-columns
+delete-a-column
 remove-duplicates
 write-files
 bind-datasets
