@@ -104,7 +104,7 @@ You will find a PostGIS database names as casa in your postgreSQL
 
 ![](pic/post15.png)
 </center>
-**The second approch:** create a database in PostgreSQL + extent it to PostGIS database ([Enabling PostGIS](https://postgis.net/install/))
+**The second approach:** create a database in PostgreSQL + extent it to PostGIS database ([Enabling PostGIS](https://postgis.net/install/))
 <center>
 
 ![](pic/postold.png)

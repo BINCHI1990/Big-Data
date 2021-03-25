@@ -42,7 +42,9 @@
  -   [BASE R, THE TIDYVERSE, AND DATA.TABLE: A COMPARISON OF R DIALECTS TO WRANGLE YOUR DATA](https://wetlandscapes.com/blog/a-comparison-of-r-dialects/)
   
  -   [Speed comparison of rbind, bind_rows, and rbindlist](https://rstudio-pubs-static.s3.amazonaws.com/406521_7fc7b6c1dc374e9b8860e15a699d8bb0.html)
- 
+  
+ -   [dplyr backends: multidplyr 0.1.0, dtplyr 1.1.0, dbplyr 2.1.0](https://www.tidyverse.org/blog/2021/02/dplyr-backends/)
+  
 > rbindlist() is the fastest method and rbind() is the slowest. bind_rows() is half as fast as rbindlist()
   
 ## Resources for the data.table package
@@ -51,6 +53,8 @@
   
  -   [A data.table and dplyr tour](https://atrebas.github.io/post/2019-03-03-datatable-dplyr/)
   
+ -   [Data.Table – everything you need to know to get you started in R](https://hutsons-hacks.info/data-table-everything-you-need-to-know-to-get-you-started-in-r)
+ 
  -   [Blazing Fast Data Wrangling With R data.table](https://towardsdatascience.com/blazing-fast-data-wrangling-with-r-data-table-de5045cc4b4d)
   
  -   [data.table in R – The Complete Beginners Guide](https://www.machinelearningplus.com/data-manipulation/datatable-in-r-complete-guide/)
@@ -59,9 +63,8 @@
   
  -   [Advanced-Data Wrangling In R — 4](https://medium.com/analytics-vidhya/advanced-data-wrangling-in-r-4-f98693b92851)
   
-
  -   [R : DATA.TABLE TUTORIAL (WITH 50 EXAMPLES)](https://www.listendata.com/2016/10/r-data-table.html)
-  
+    
 ## Resources for measuring R performance
    
  -   [5 ways to measure running time of R code](https://www.r-bloggers.com/2017/05/5-ways-to-measure-running-time-of-r-code/)

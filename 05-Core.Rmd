@@ -42,9 +42,20 @@ epcdata14<-read.csv("D_EPC_data_2020_Q4_extract_0221.csv", skip = 1)
 ### Fast reading multiple EPC csv files together in R
 
 #### Code for reading in EPCs in England and Wales
+
+<center>
+
+![](pic/epc0.png)
+</center>
+***
+
+<center>
+
+![](pic/epc1.png)
+</center>
 ```{r,eval=FALSE}
 ## assume all the unzipped EPC stored in EPC folder in D drive
-
+setwd("D:/EPC")
 
 x1 <- list.files(path = ".", pattern = NULL, all.files = FALSE,
                  full.names = FALSE, recursive = FALSE)
@@ -57,7 +68,10 @@ epcdata = data.table::rbindlist(lapply(datalist, data.table::fread, showProgress
 ```
 
 #### Code for reading in EPCs in Scotland
+<center>
 
+![](pic/epc3.png)
+</center>
 ```{r,eval=FALSE}
 datalist = list.files(pattern="*.csv")
 

@@ -243,8 +243,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">4.1.2</span> Fast reading multiple EPC csv files together in R</h3>
 <div id="code-for-reading-in-epcs-in-england-and-wales" class="section level4" number="4.1.2.1">
 <h4><span class="header-section-number">4.1.2.1</span> Code for reading in EPCs in England and Wales</h4>
+<center>
+<img src="pic/epc0.png" />
+</center>
+<hr />
+<center>
+<img src="pic/epc1.png" />
+</center>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="working-with-big-data-in-r.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## assume all the unzipped EPC stored in EPC folder in D drive</span></span>
-<span id="cb6-2"><a href="working-with-big-data-in-r.html#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-2"><a href="working-with-big-data-in-r.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;D:/EPC&quot;</span>)</span>
 <span id="cb6-3"><a href="working-with-big-data-in-r.html#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="working-with-big-data-in-r.html#cb6-4" aria-hidden="true" tabindex="-1"></a>x1 <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path =</span> <span class="st">&quot;.&quot;</span>, <span class="at">pattern =</span> <span class="cn">NULL</span>, <span class="at">all.files =</span> <span class="cn">FALSE</span>,</span>
 <span id="cb6-5"><a href="working-with-big-data-in-r.html#cb6-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">full.names =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">FALSE</span>)</span>
@@ -256,6 +263,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="code-for-reading-in-epcs-in-scotland" class="section level4" number="4.1.2.2">
 <h4><span class="header-section-number">4.1.2.2</span> Code for reading in EPCs in Scotland</h4>
+<center>
+<img src="pic/epc3.png" />
+</center>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="working-with-big-data-in-r.html#cb7-1" aria-hidden="true" tabindex="-1"></a>datalist <span class="ot">=</span> <span class="fu">list.files</span>(<span class="at">pattern=</span><span class="st">&quot;*.csv&quot;</span>)</span>
 <span id="cb7-2"><a href="working-with-big-data-in-r.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="working-with-big-data-in-r.html#cb7-3" aria-hidden="true" tabindex="-1"></a>epcdata <span class="ot">=</span> data.table<span class="sc">::</span><span class="fu">rbindlist</span>(<span class="fu">lapply</span>(datalist, data.table<span class="sc">::</span>fread, <span class="at">skip=</span><span class="dv">1</span>,<span class="at">showProgress =</span> <span class="cn">FALSE</span>))</span></code></pre></div>
@@ -557,7 +567,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb47-6"><a href="working-with-big-data-in-r.html#cb47-6" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb47-7"><a href="working-with-big-data-in-r.html#cb47-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-8"><a href="working-with-big-data-in-r.html#cb47-8" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.646657 secs</code></pre>
+<pre><code>## Time difference of 0.01401877 secs</code></pre>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="working-with-big-data-in-r.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert data.table to data.frame</span></span>
 <span id="cb49-2"><a href="working-with-big-data-in-r.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setDF</span>(epcdata1)</span>
 <span id="cb49-3"><a href="working-with-big-data-in-r.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setDF</span>(epcdata14)</span>
@@ -567,7 +577,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb49-7"><a href="working-with-big-data-in-r.html#cb49-7" aria-hidden="true" tabindex="-1"></a>epcdata<span class="ot">&lt;-</span><span class="fu">rbind</span>(epcdata1,epcdata14)</span>
 <span id="cb49-8"><a href="working-with-big-data-in-r.html#cb49-8" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb49-9"><a href="working-with-big-data-in-r.html#cb49-9" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.0146811 secs</code></pre>
+<pre><code>## Time difference of 0.03597403 secs</code></pre>
 <div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="working-with-big-data-in-r.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert data.frame to data.table</span></span>
 <span id="cb51-2"><a href="working-with-big-data-in-r.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setDT</span>(epcdata14)</span>
 <span id="cb51-3"><a href="working-with-big-data-in-r.html#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setDT</span>(epcdata1)</span>
@@ -578,7 +588,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb51-8"><a href="working-with-big-data-in-r.html#cb51-8" aria-hidden="true" tabindex="-1"></a>end_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb51-9"><a href="working-with-big-data-in-r.html#cb51-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb51-10"><a href="working-with-big-data-in-r.html#cb51-10" aria-hidden="true" tabindex="-1"></a>end_time <span class="sc">-</span> start_time</span></code></pre></div>
-<pre><code>## Time difference of 0.006995201 secs</code></pre>
+<pre><code>## Time difference of 0.01601791 secs</code></pre>
 </div>
 <div id="profvis--an-interactive-profile-visualizations" class="section level3" number="4.4.2">
 <h3><span class="header-section-number">4.4.2</span> profvis- an interactive profile visualizations</h3>
